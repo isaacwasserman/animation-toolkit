@@ -41,12 +41,14 @@ class Sphere3D : public atkui::Framework {
 
   void move_random(){
     vec3 direction = agl::randomUnitVector();
-    float magnitude = agl::random() * 100;
+    // Decided to always make y component positive to avoid sphere going below floor
+    direction = vec3(direction[0], glm::abs(direction[1]), direction[2]);
+    float magnitude = agl::random() * 300;
     int duration = 2;
     disp = direction * magnitude;
     dest = pos + disp;
     vel = disp * (1.0f / duration);
-    std::cout << magnitude << std::endl;
+    // std::cout << magnitude << std::endl;
   }
 
   void update_pos(){
@@ -60,7 +62,7 @@ class Sphere3D : public atkui::Framework {
     if(glm::dot(vel, diff) <= 0){
       vel = vec3(0);
     }
-    std::cout << disp << std::endl;
+    // std::cout << disp << std::endl;
   }
 
   void reset(){
