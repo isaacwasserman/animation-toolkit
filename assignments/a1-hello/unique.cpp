@@ -86,7 +86,7 @@ class Unique : public atkui::Framework {
   std::vector<Ball> balls;
   int nBalls = 20;
   float maxInitialXVelocity = 200;
-  float nextGravityChange = 10;
+  int ballZIndex = 0;
 
   std::vector<vec3> palette = {
     vec3(1,0.6824,0.0018),
@@ -97,7 +97,7 @@ class Unique : public atkui::Framework {
 
   virtual void setup() {
     for(int i=0; i<nBalls; i++){
-      balls.push_back(Ball(randomBallPosition(), vec3((agl::random() * maxInitialXVelocity * 2)-maxInitialXVelocity, 0, 0), palette[rand() % palette.size()]));
+      spawnBall();
     }
   }
 
@@ -105,9 +105,6 @@ class Unique : public atkui::Framework {
     drawBackground();
     for(Ball& ball : balls){
       drawBall(ball);
-    }
-    if(elapsedTime() >= nextGravityChange){
-      // gravityShift();
     }
   }
 
@@ -149,8 +146,10 @@ class Unique : public atkui::Framework {
     return ((float) rand()) / ((float) RAND_MAX);
   }
 
-  void spawnBall(){
-    balls.push_back(Ball(vec3(random() * width(), random() * height(), 0), vec3((random() * maxInitialXVelocity * 2)-maxInitialXVelocity, 0, 0), palette[rand() % palette.size()]));
+  Ball spawnBall(){
+    Ball ball = Ball(vec3(random() * width(), random() * height(), 0), vec3((random() * maxInitialXVelocity * 2)-maxInitialXVelocity, 0, 0), palette[rand() % palette.size()]);
+    balls.push_back(ball);
+    return ball;
   }
 
   void gravityShift(){
@@ -172,14 +171,20 @@ class Unique : public atkui::Framework {
     for(Ball& ball : balls){
       ball.acceleration = gravity * dynamicsMultiplier;
     }
-    nextGravityChange += 10;
+  }
+
+  void reset(){
+    balls = {};
+    setup();
   }
 
   void keyUp(int key, int mods){
       // Space pressed
       if(key == GLFW_KEY_R){
-         balls = {};
-         setup();
+         reset();
+      }
+      else if(key == GLFW_KEY_G){
+        gravityShift();
       }
    }
 };
