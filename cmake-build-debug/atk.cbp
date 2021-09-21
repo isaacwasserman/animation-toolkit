@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="atk"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\assignments\;CMake Files\assignments\a0-start\;CMake Files\assignments\a1-hello\;CMake Files\assignments\a2-interpolation\;CMake Files\classexamples\;CMake Files\libsrc\;CMake Files\libsrc\agl\;CMake Files\libsrc\atk\;CMake Files\libsrc\atkui\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a0-sphere3d">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a0-sphere3d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 a0-sphere3d"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a0-sphere3d/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a0-sphere3d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 a0-sphere3d/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a0-sphere2d">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a0-sphere2d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 a0-sphere2d"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a0-sphere2d/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a0-sphere2d" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 a0-sphere2d/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a0-start/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-unique">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-unique" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-unique"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-unique/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-unique" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-unique/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-circles">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-circles" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-circles"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-circles/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-circles" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-circles/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-particles">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-particles" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-particles"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-particles/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-particles" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-particles/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-look">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-look" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-look"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-look/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-look" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-look/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-eyes">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-eyes" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-eyes"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a1-eyes/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a1-eyes" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 a1-eyes/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a1-hello/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-particlecubic">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-particlecubic" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-particlecubic"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-particlecubic/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-particlecubic" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-particlecubic/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-drawcurve">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-drawcurve" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-drawcurve"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-drawcurve/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-drawcurve" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-drawcurve/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-screensaver">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-screensaver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-screensaver"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-screensaver/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-screensaver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-screensaver/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-unique">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-unique" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-unique"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-unique/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-unique" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-unique/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-gradient">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-gradient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-gradient"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a2-gradient/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a2-gradient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 a2-gradient/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week01-linearMotion">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week01-linearMotion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week01-linearMotion"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week01-linearMotion/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week01-linearMotion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week01-linearMotion/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="agl">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/lib/libagl.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl/Makefile&quot;  VERBOSE=1 agl"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="agl/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/lib/libagl.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl/Makefile&quot;  VERBOSE=1 agl/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/agl/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="atk">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/lib/libatk.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk/Makefile&quot;  VERBOSE=1 atk"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="atk/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/lib/libatk.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk/Makefile&quot;  VERBOSE=1 atk/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atk/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="atkui">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/lib/libatkui.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui/Makefile&quot;  VERBOSE=1 atkui"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="atkui/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/lib/libatkui.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui/Makefile&quot;  VERBOSE=1 atkui/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/libsrc/atkui/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a0-start/sphere2d.cpp">
+			<Option target="a0-sphere2d"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a0-start/sphere3d.cpp">
+			<Option target="a0-sphere3d"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a1-hello/circles.cpp">
+			<Option target="a1-circles"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a1-hello/eyes.cpp">
+			<Option target="a1-eyes"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a1-hello/look.cpp">
+			<Option target="a1-look"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a1-hello/particles.cpp">
+			<Option target="a1-particles"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a1-hello/unique.cpp">
+			<Option target="a1-unique"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/drawcurve.cpp">
+			<Option target="a2-drawcurve"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/gradient.cpp">
+			<Option target="a2-gradient"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/particlecubic.cpp">
+			<Option target="a2-particlecubic"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/screensaver.cpp">
+			<Option target="a2-screensaver"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/unique.cpp">
+			<Option target="a2-unique"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week01-linearMotion.cpp">
+			<Option target="week01-linearMotion"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/agl.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/aglm.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/aglm.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/camera.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/camera.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/image.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/image.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/capsule.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/capsule.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/cube.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/cube.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/cylinder.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/cylinder.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/line_mesh.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/line_mesh.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/plane.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/plane.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/point_mesh.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/point_mesh.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/pyramid.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/pyramid.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/skybox.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/skybox.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/sphere.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/sphere.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/teapot.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/teapot.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/teapotdata.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/torus.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/torus.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/triangle_mesh.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/mesh/triangle_mesh.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/renderer.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/renderer.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/shader.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/shader.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/window.cpp">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/window.h">
+			<Option target="agl"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/bvhreader.cpp">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/bvhreader.h">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/bvhwriter.cpp">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/bvhwriter.h">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/joint.cpp">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/joint.h">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/motion.cpp">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/motion.h">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/pose.cpp">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/pose.h">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/skeleton.cpp">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/skeleton.h">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/transform.cpp">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/transform.h">
+			<Option target="atk"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atkui/framework.cpp">
+			<Option target="atkui"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atkui/framework.h">
+			<Option target="atkui"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\assignments\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a0-start/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\assignments\a0-start\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a1-hello/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\assignments\a1-hello\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\assignments\a2-interpolation\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\classexamples\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libsrc\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libsrc\agl\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atk/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libsrc\atk\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/atkui/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libsrc\atkui\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

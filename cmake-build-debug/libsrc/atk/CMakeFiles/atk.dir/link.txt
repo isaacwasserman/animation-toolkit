@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc ../../../lib/libatk.a CMakeFiles/atk.dir/transform.cpp.o CMakeFiles/atk.dir/bvhreader.cpp.o CMakeFiles/atk.dir/bvhwriter.cpp.o CMakeFiles/atk.dir/skeleton.cpp.o CMakeFiles/atk.dir/joint.cpp.o CMakeFiles/atk.dir/pose.cpp.o CMakeFiles/atk.dir/motion.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib ../../../lib/libatk.a

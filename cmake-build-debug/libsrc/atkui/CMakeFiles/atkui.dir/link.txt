@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc ../../../lib/libatkui.a CMakeFiles/atkui.dir/framework.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib ../../../lib/libatkui.a
