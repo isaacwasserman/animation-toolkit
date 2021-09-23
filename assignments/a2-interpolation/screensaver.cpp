@@ -1,17 +1,23 @@
 #include "atkui/framework.h"
 #include <math.h>
+#include <map>
 using namespace glm;
 
 class Curve {
   public:
     std::vector<glm::vec3> control_points;
     std::vector<float> range = {0,1};
+    vec3 color = vec3(1,1,1);
     Curve(std::vector<glm::vec3> control_pts, float t_0, float t_1) {
       control_points = control_pts;
       range = {t_0, t_1};
     }
     Curve(std::vector<glm::vec3> control_pts) {
       control_points = control_pts;
+    }
+    Curve(std::vector<glm::vec3> control_pts, vec3 c) {
+      control_points = control_pts;
+      color = c;
     }
     vec3 compute(float param, std::vector<glm::vec3> control_pts) {
       std::vector<glm::vec3> new_pts;
@@ -79,15 +85,20 @@ class Screensaver : public atkui::Framework {
   Screensaver() : atkui::Framework(atkui::Orthographic) {
   }
 
-  Curve start_curve = Curve({vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0)});
-  Curve end_curve = Curve({vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0)});
+  Curve start_curve = Curve({vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0)}, agl::randomUnitVector());
+  Curve end_curve = Curve({vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0)}, agl::randomUnitVector());
   Curve animated_curve = start_curve;
+  std::list<Curve> past_curves;
+  float lastSaveTime = 0;
   float duration = 1;
   float t = 0;
   std::vector<std::vector<vec3>> lines;
+  int max_trail = 50;
 
   void setup() {
   }
+
+  int resolution = 20;
 
   void scene() {
     t += dt();
@@ -95,19 +106,55 @@ class Screensaver : public atkui::Framework {
       t = 0;
       start_curve = end_curve;
       animated_curve = start_curve;
-      end_curve = Curve({vec3(agl::random() * width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0)});
+      end_curve = Curve({vec3(agl::random() * width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0), vec3(agl::random()* width(), agl::random()* height(), 0)}, agl::randomUnitVector());
     }
-    setColor(vec3(1,1,1));
-    lines = {};
-    std::vector<std::vector<vec3>> start_lines = start_curve.trace();
-    std::vector<std::vector<vec3>> end_lines = end_curve.trace();
-    std::vector<std::vector<vec3>> animated_lines = animated_curve.trace();
-    lines.insert(lines.end(), start_lines.begin(), start_lines.end());
-    lines.insert(lines.end(), end_lines.begin(), end_lines.end());
-    lines.insert(lines.end(), animated_lines.begin(), animated_lines.end());
-    for(const std::vector<vec3>& line : lines){
-      drawLine(line[0],line[1]);
+
+    if(elapsedTime() - lastSaveTime >= 0.1){
+      past_curves.push_back(animated_curve);
+      if(past_curves.size() > max_trail){
+        past_curves.pop_front();
+      }
+      lastSaveTime = elapsedTime();
     }
+
+    Curve p0_curve = Curve({start_curve.control_points[0], end_curve.control_points[0]});
+    Curve p1_curve = Curve({start_curve.control_points[1], end_curve.control_points[1]});
+    Curve p2_curve = Curve({start_curve.control_points[2], end_curve.control_points[2]});
+    Curve p3_curve = Curve({start_curve.control_points[3], end_curve.control_points[3]});
+    Curve color_curve = Curve({start_curve.color, end_curve.color});
+    std::vector<Curve> animation_curves = {p0_curve, p1_curve, p2_curve, p3_curve};
+    for(int i=0; i<animation_curves.size(); i++){
+      animated_curve.control_points[i] = animation_curves[i].compute(t);
+    }
+    animated_curve.color = color_curve.compute(t);
+    std::vector<std::vector<vec3>> start_lines = start_curve.trace(resolution);
+    std::vector<std::vector<vec3>> end_lines = end_curve.trace(resolution);
+    std::vector<std::vector<vec3>> animated_lines = animated_curve.trace(resolution);
+    for(int i=0; i<start_lines.size(); i++){
+      setColor(start_curve.color);
+      drawLine(start_lines[i][0],start_lines[i][1]);
+    }
+    // for(int i=0; i<end_lines.size(); i++){
+    //   setColor(end_curve.color);
+    //   drawLine(end_lines[i][0],end_lines[i][1]);
+    // }
+    for(int i=0; i<animated_lines.size(); i++){
+      setColor(animated_curve.color);
+      drawLine(animated_lines[i][0],animated_lines[i][1]);
+    }
+    for(int i=0; i<past_curves.size(); i++){
+      std::vector<Curve> past_curves_v{ std::begin(past_curves), std::end(past_curves) };
+      std::vector<std::vector<vec3>> trail_lines = past_curves_v[i].trace(resolution);
+      setColor(past_curves_v[i].color);
+      for(int k=0; k<trail_lines.size(); k++){
+        drawLine(trail_lines[k][0],trail_lines[k][1]);
+      }
+    }
+  }
+
+  vec3 lerp(const vec3& start, const vec3& end, const float& t){
+    vec3 delta = end - start;
+    return delta * t;
   }
 };
 

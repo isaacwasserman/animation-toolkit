@@ -80,11 +80,6 @@ class DrawCubic : public atkui::Framework
   int resolution = 10;
   std::vector<std::vector<vec3>> lines;
 
-  virtual void setup(){
-    Curve c = Curve({});
-    std::cout << c.factorial(1) << " " << c.factorial(2) << " " << c.factorial(3) << std::endl;
-  }
-
   virtual void scene()
   {
     setColor(vec3(0,0,1));
