@@ -118,6 +118,48 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+classexamples/CMakeFiles/week03-solveEqn.dir/rule:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week03-solveEqn.dir/rule
+.PHONY : classexamples/CMakeFiles/week03-solveEqn.dir/rule
+
+# Convenience name for target.
+week03-solveEqn: classexamples/CMakeFiles/week03-solveEqn.dir/rule
+.PHONY : week03-solveEqn
+
+# fast build rule for target.
+week03-solveEqn/fast:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-solveEqn.dir/build.make classexamples/CMakeFiles/week03-solveEqn.dir/build
+.PHONY : week03-solveEqn/fast
+
+# Convenience name for target.
+classexamples/CMakeFiles/week02-drawline.dir/rule:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week02-drawline.dir/rule
+.PHONY : classexamples/CMakeFiles/week02-drawline.dir/rule
+
+# Convenience name for target.
+week02-drawline: classexamples/CMakeFiles/week02-drawline.dir/rule
+.PHONY : week02-drawline
+
+# fast build rule for target.
+week02-drawline/fast:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-drawline.dir/build.make classexamples/CMakeFiles/week02-drawline.dir/build
+.PHONY : week02-drawline/fast
+
+# Convenience name for target.
+classexamples/CMakeFiles/week03-hermiteEx.dir/rule:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week03-hermiteEx.dir/rule
+.PHONY : classexamples/CMakeFiles/week03-hermiteEx.dir/rule
+
+# Convenience name for target.
+week03-hermiteEx: classexamples/CMakeFiles/week03-hermiteEx.dir/rule
+.PHONY : week03-hermiteEx
+
+# fast build rule for target.
+week03-hermiteEx/fast:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-hermiteEx.dir/build.make classexamples/CMakeFiles/week03-hermiteEx.dir/build
+.PHONY : week03-hermiteEx/fast
+
+# Convenience name for target.
 classexamples/CMakeFiles/week01-linearMotion.dir/rule:
 	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week01-linearMotion.dir/rule
 .PHONY : classexamples/CMakeFiles/week01-linearMotion.dir/rule
@@ -130,6 +172,72 @@ week01-linearMotion: classexamples/CMakeFiles/week01-linearMotion.dir/rule
 week01-linearMotion/fast:
 	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-linearMotion.dir/build.make classexamples/CMakeFiles/week01-linearMotion.dir/build
 .PHONY : week01-linearMotion/fast
+
+# Convenience name for target.
+classexamples/CMakeFiles/week01-oscillatingMotion.dir/rule:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week01-oscillatingMotion.dir/rule
+.PHONY : classexamples/CMakeFiles/week01-oscillatingMotion.dir/rule
+
+# Convenience name for target.
+week01-oscillatingMotion: classexamples/CMakeFiles/week01-oscillatingMotion.dir/rule
+.PHONY : week01-oscillatingMotion
+
+# fast build rule for target.
+week01-oscillatingMotion/fast:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-oscillatingMotion.dir/build.make classexamples/CMakeFiles/week01-oscillatingMotion.dir/build
+.PHONY : week01-oscillatingMotion/fast
+
+# Convenience name for target.
+classexamples/CMakeFiles/week02-colorLerp.dir/rule:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week02-colorLerp.dir/rule
+.PHONY : classexamples/CMakeFiles/week02-colorLerp.dir/rule
+
+# Convenience name for target.
+week02-colorLerp: classexamples/CMakeFiles/week02-colorLerp.dir/rule
+.PHONY : week02-colorLerp
+
+# fast build rule for target.
+week02-colorLerp/fast:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-colorLerp.dir/build.make classexamples/CMakeFiles/week02-colorLerp.dir/build
+.PHONY : week02-colorLerp/fast
+
+# Convenience name for target.
+classexamples/CMakeFiles/week01-circularMotion.dir/rule:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week01-circularMotion.dir/rule
+.PHONY : classexamples/CMakeFiles/week01-circularMotion.dir/rule
+
+# Convenience name for target.
+week01-circularMotion: classexamples/CMakeFiles/week01-circularMotion.dir/rule
+.PHONY : week01-circularMotion
+
+# fast build rule for target.
+week01-circularMotion/fast:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-circularMotion.dir/build.make classexamples/CMakeFiles/week01-circularMotion.dir/build
+.PHONY : week01-circularMotion/fast
+
+week01-circularMotion.o: week01-circularMotion.cpp.o
+.PHONY : week01-circularMotion.o
+
+# target to build an object file
+week01-circularMotion.cpp.o:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-circularMotion.dir/build.make classexamples/CMakeFiles/week01-circularMotion.dir/week01-circularMotion.cpp.o
+.PHONY : week01-circularMotion.cpp.o
+
+week01-circularMotion.i: week01-circularMotion.cpp.i
+.PHONY : week01-circularMotion.i
+
+# target to preprocess a source file
+week01-circularMotion.cpp.i:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-circularMotion.dir/build.make classexamples/CMakeFiles/week01-circularMotion.dir/week01-circularMotion.cpp.i
+.PHONY : week01-circularMotion.cpp.i
+
+week01-circularMotion.s: week01-circularMotion.cpp.s
+.PHONY : week01-circularMotion.s
+
+# target to generate assembly for a file
+week01-circularMotion.cpp.s:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-circularMotion.dir/build.make classexamples/CMakeFiles/week01-circularMotion.dir/week01-circularMotion.cpp.s
+.PHONY : week01-circularMotion.cpp.s
 
 week01-linearMotion.o: week01-linearMotion.cpp.o
 .PHONY : week01-linearMotion.o
@@ -155,6 +263,126 @@ week01-linearMotion.cpp.s:
 	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-linearMotion.dir/build.make classexamples/CMakeFiles/week01-linearMotion.dir/week01-linearMotion.cpp.s
 .PHONY : week01-linearMotion.cpp.s
 
+week01-oscillatingMotion.o: week01-oscillatingMotion.cpp.o
+.PHONY : week01-oscillatingMotion.o
+
+# target to build an object file
+week01-oscillatingMotion.cpp.o:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-oscillatingMotion.dir/build.make classexamples/CMakeFiles/week01-oscillatingMotion.dir/week01-oscillatingMotion.cpp.o
+.PHONY : week01-oscillatingMotion.cpp.o
+
+week01-oscillatingMotion.i: week01-oscillatingMotion.cpp.i
+.PHONY : week01-oscillatingMotion.i
+
+# target to preprocess a source file
+week01-oscillatingMotion.cpp.i:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-oscillatingMotion.dir/build.make classexamples/CMakeFiles/week01-oscillatingMotion.dir/week01-oscillatingMotion.cpp.i
+.PHONY : week01-oscillatingMotion.cpp.i
+
+week01-oscillatingMotion.s: week01-oscillatingMotion.cpp.s
+.PHONY : week01-oscillatingMotion.s
+
+# target to generate assembly for a file
+week01-oscillatingMotion.cpp.s:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-oscillatingMotion.dir/build.make classexamples/CMakeFiles/week01-oscillatingMotion.dir/week01-oscillatingMotion.cpp.s
+.PHONY : week01-oscillatingMotion.cpp.s
+
+week02-colorLerp.o: week02-colorLerp.cpp.o
+.PHONY : week02-colorLerp.o
+
+# target to build an object file
+week02-colorLerp.cpp.o:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-colorLerp.dir/build.make classexamples/CMakeFiles/week02-colorLerp.dir/week02-colorLerp.cpp.o
+.PHONY : week02-colorLerp.cpp.o
+
+week02-colorLerp.i: week02-colorLerp.cpp.i
+.PHONY : week02-colorLerp.i
+
+# target to preprocess a source file
+week02-colorLerp.cpp.i:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-colorLerp.dir/build.make classexamples/CMakeFiles/week02-colorLerp.dir/week02-colorLerp.cpp.i
+.PHONY : week02-colorLerp.cpp.i
+
+week02-colorLerp.s: week02-colorLerp.cpp.s
+.PHONY : week02-colorLerp.s
+
+# target to generate assembly for a file
+week02-colorLerp.cpp.s:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-colorLerp.dir/build.make classexamples/CMakeFiles/week02-colorLerp.dir/week02-colorLerp.cpp.s
+.PHONY : week02-colorLerp.cpp.s
+
+week02-drawline.o: week02-drawline.cpp.o
+.PHONY : week02-drawline.o
+
+# target to build an object file
+week02-drawline.cpp.o:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-drawline.dir/build.make classexamples/CMakeFiles/week02-drawline.dir/week02-drawline.cpp.o
+.PHONY : week02-drawline.cpp.o
+
+week02-drawline.i: week02-drawline.cpp.i
+.PHONY : week02-drawline.i
+
+# target to preprocess a source file
+week02-drawline.cpp.i:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-drawline.dir/build.make classexamples/CMakeFiles/week02-drawline.dir/week02-drawline.cpp.i
+.PHONY : week02-drawline.cpp.i
+
+week02-drawline.s: week02-drawline.cpp.s
+.PHONY : week02-drawline.s
+
+# target to generate assembly for a file
+week02-drawline.cpp.s:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-drawline.dir/build.make classexamples/CMakeFiles/week02-drawline.dir/week02-drawline.cpp.s
+.PHONY : week02-drawline.cpp.s
+
+week03-hermiteEx.o: week03-hermiteEx.cpp.o
+.PHONY : week03-hermiteEx.o
+
+# target to build an object file
+week03-hermiteEx.cpp.o:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-hermiteEx.dir/build.make classexamples/CMakeFiles/week03-hermiteEx.dir/week03-hermiteEx.cpp.o
+.PHONY : week03-hermiteEx.cpp.o
+
+week03-hermiteEx.i: week03-hermiteEx.cpp.i
+.PHONY : week03-hermiteEx.i
+
+# target to preprocess a source file
+week03-hermiteEx.cpp.i:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-hermiteEx.dir/build.make classexamples/CMakeFiles/week03-hermiteEx.dir/week03-hermiteEx.cpp.i
+.PHONY : week03-hermiteEx.cpp.i
+
+week03-hermiteEx.s: week03-hermiteEx.cpp.s
+.PHONY : week03-hermiteEx.s
+
+# target to generate assembly for a file
+week03-hermiteEx.cpp.s:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-hermiteEx.dir/build.make classexamples/CMakeFiles/week03-hermiteEx.dir/week03-hermiteEx.cpp.s
+.PHONY : week03-hermiteEx.cpp.s
+
+week03-solveEqn.o: week03-solveEqn.cpp.o
+.PHONY : week03-solveEqn.o
+
+# target to build an object file
+week03-solveEqn.cpp.o:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-solveEqn.dir/build.make classexamples/CMakeFiles/week03-solveEqn.dir/week03-solveEqn.cpp.o
+.PHONY : week03-solveEqn.cpp.o
+
+week03-solveEqn.i: week03-solveEqn.cpp.i
+.PHONY : week03-solveEqn.i
+
+# target to preprocess a source file
+week03-solveEqn.cpp.i:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-solveEqn.dir/build.make classexamples/CMakeFiles/week03-solveEqn.dir/week03-solveEqn.cpp.i
+.PHONY : week03-solveEqn.cpp.i
+
+week03-solveEqn.s: week03-solveEqn.cpp.s
+.PHONY : week03-solveEqn.s
+
+# target to generate assembly for a file
+week03-solveEqn.cpp.s:
+	cd "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-solveEqn.dir/build.make classexamples/CMakeFiles/week03-solveEqn.dir/week03-solveEqn.cpp.s
+.PHONY : week03-solveEqn.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,10 +391,34 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... week01-circularMotion"
 	@echo "... week01-linearMotion"
+	@echo "... week01-oscillatingMotion"
+	@echo "... week02-colorLerp"
+	@echo "... week02-drawline"
+	@echo "... week03-hermiteEx"
+	@echo "... week03-solveEqn"
+	@echo "... week01-circularMotion.o"
+	@echo "... week01-circularMotion.i"
+	@echo "... week01-circularMotion.s"
 	@echo "... week01-linearMotion.o"
 	@echo "... week01-linearMotion.i"
 	@echo "... week01-linearMotion.s"
+	@echo "... week01-oscillatingMotion.o"
+	@echo "... week01-oscillatingMotion.i"
+	@echo "... week01-oscillatingMotion.s"
+	@echo "... week02-colorLerp.o"
+	@echo "... week02-colorLerp.i"
+	@echo "... week02-colorLerp.s"
+	@echo "... week02-drawline.o"
+	@echo "... week02-drawline.i"
+	@echo "... week02-drawline.s"
+	@echo "... week03-hermiteEx.o"
+	@echo "... week03-hermiteEx.i"
+	@echo "... week03-hermiteEx.s"
+	@echo "... week03-solveEqn.o"
+	@echo "... week03-solveEqn.i"
+	@echo "... week03-solveEqn.s"
 .PHONY : help
 
 

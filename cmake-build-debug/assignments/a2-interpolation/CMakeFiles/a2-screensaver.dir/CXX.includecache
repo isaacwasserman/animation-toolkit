@@ -219,6 +219,10 @@ vector
 /Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/screensaver.cpp
 atkui/framework.h
 /Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/atkui/framework.h
+math.h
+-
+map
+-
 
 /usr/local/include/GL/glew.h
 cstddef

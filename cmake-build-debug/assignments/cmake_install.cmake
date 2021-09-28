@@ -52,3 +52,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/cmake_install.cmake")
+endif()
+

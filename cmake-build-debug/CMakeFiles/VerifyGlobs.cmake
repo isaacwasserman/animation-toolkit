@@ -5,7 +5,13 @@ cmake_policy(SET CMP0009 NEW)
 # EXAMPLES at classexamples/CMakeLists.txt:3 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/*.cpp")
 set(OLD_GLOB
+  "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week01-circularMotion.cpp"
   "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week01-linearMotion.cpp"
+  "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week01-oscillatingMotion.cpp"
+  "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week02-colorLerp.cpp"
+  "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week02-drawline.cpp"
+  "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week03-hermiteEx.cpp"
+  "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week03-solveEqn.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

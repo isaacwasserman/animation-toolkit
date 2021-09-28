@@ -5,7 +5,7 @@
 		<Option title="atk"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="clang"/>
-		<Option virtualFolders="CMake Files\;CMake Files\assignments\;CMake Files\assignments\a0-start\;CMake Files\assignments\a1-hello\;CMake Files\assignments\a2-interpolation\;CMake Files\classexamples\;CMake Files\libsrc\;CMake Files\libsrc\agl\;CMake Files\libsrc\atk\;CMake Files\libsrc\atkui\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\assignments\;CMake Files\assignments\a0-start\;CMake Files\assignments\a1-hello\;CMake Files\assignments\a2-interpolation\;CMake Files\assignments\a3-splines\;CMake Files\classexamples\;CMake Files\libsrc\;CMake Files\libsrc\agl\;CMake Files\libsrc\atk\;CMake Files\libsrc\atkui\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug"/>
@@ -637,6 +637,456 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a2-interpolation/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="a3-unique">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-unique" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-unique"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-unique/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-unique" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-unique/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-test-linear">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-test-linear" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-test-linear"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-test-linear/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-test-linear" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-test-linear/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-test-hermite">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-test-hermite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-test-hermite"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-test-hermite/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-test-hermite" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-test-hermite/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-test-spline">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-test-spline" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-test-spline"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-test-spline/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-test-spline" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-test-spline/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-test-catmullrom">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-test-catmullrom" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-test-catmullrom"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-test-catmullrom/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-test-catmullrom" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-test-catmullrom/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-curve-editor">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-curve-editor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-curve-editor"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="a3-curve-editor/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/a3-curve-editor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 a3-curve-editor/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/assignments/a3-splines/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week03-solveEqn">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week03-solveEqn" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week03-solveEqn"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week03-solveEqn/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week03-solveEqn" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week03-solveEqn/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week02-drawline">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week02-drawline" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week02-drawline"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week02-drawline/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week02-drawline" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week02-drawline/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week03-hermiteEx">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week03-hermiteEx" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week03-hermiteEx"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week03-hermiteEx/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week03-hermiteEx" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week03-hermiteEx/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="week01-linearMotion">
 				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week01-linearMotion" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
@@ -682,6 +1132,156 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week01-linearMotion/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week01-oscillatingMotion">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week01-oscillatingMotion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week01-oscillatingMotion"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week01-oscillatingMotion/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week01-oscillatingMotion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week01-oscillatingMotion/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week02-colorLerp">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week02-colorLerp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week02-colorLerp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week02-colorLerp/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week02-colorLerp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week02-colorLerp/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week01-circularMotion">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week01-circularMotion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week01-circularMotion"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="week01-circularMotion/fast">
+				<Option output="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin/week01-circularMotion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DAPPLE"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/."/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/external/include"/>
+					<Add directory="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 week01-circularMotion/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/isaac/Desktop/Classes/Computer\ Animation/projects/animation-toolkit/cmake-build-debug/classexamples/Makefile&quot;  VERBOSE=1 clean"/>
@@ -874,8 +1474,73 @@
 		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/unique.cpp">
 			<Option target="a2-unique"/>
 		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/curve_editor.cpp">
+			<Option target="a3-curve-editor"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/curve_editor.h">
+			<Option target="a3-curve-editor"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/interpolator.cpp">
+			<Option target="a3-unique"/>
+			<Option target="a3-test-linear"/>
+			<Option target="a3-test-hermite"/>
+			<Option target="a3-test-spline"/>
+			<Option target="a3-test-catmullrom"/>
+			<Option target="a3-curve-editor"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/interpolator.h">
+			<Option target="a3-unique"/>
+			<Option target="a3-test-linear"/>
+			<Option target="a3-test-hermite"/>
+			<Option target="a3-test-spline"/>
+			<Option target="a3-test-catmullrom"/>
+			<Option target="a3-curve-editor"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/spline.cpp">
+			<Option target="a3-unique"/>
+			<Option target="a3-test-spline"/>
+			<Option target="a3-curve-editor"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/spline.h">
+			<Option target="a3-unique"/>
+			<Option target="a3-test-spline"/>
+			<Option target="a3-curve-editor"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/test_catmullrom.cpp">
+			<Option target="a3-test-catmullrom"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/test_hermite.cpp">
+			<Option target="a3-test-hermite"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/test_linear.cpp">
+			<Option target="a3-test-linear"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/test_spline.cpp">
+			<Option target="a3-test-spline"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/unique.cpp">
+			<Option target="a3-unique"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week01-circularMotion.cpp">
+			<Option target="week01-circularMotion"/>
+		</Unit>
 		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week01-linearMotion.cpp">
 			<Option target="week01-linearMotion"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week01-oscillatingMotion.cpp">
+			<Option target="week01-oscillatingMotion"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week02-colorLerp.cpp">
+			<Option target="week02-colorLerp"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week02-drawline.cpp">
+			<Option target="week02-drawline"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week03-hermiteEx.cpp">
+			<Option target="week03-hermiteEx"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/week03-solveEqn.cpp">
+			<Option target="week03-solveEqn"/>
 		</Unit>
 		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/libsrc/agl/agl.h">
 			<Option target="agl"/>
@@ -1059,6 +1724,9 @@
 		</Unit>
 		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a2-interpolation/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\assignments\a2-interpolation\"/>
+		</Unit>
+		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/assignments/a3-splines/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\assignments\a3-splines\"/>
 		</Unit>
 		<Unit filename="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/classexamples/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\classexamples\"/>

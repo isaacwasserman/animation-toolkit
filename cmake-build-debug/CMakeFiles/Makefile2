@@ -87,18 +87,21 @@ clean: libsrc/clean
 assignments/all: assignments/a0-start/all
 assignments/all: assignments/a1-hello/all
 assignments/all: assignments/a2-interpolation/all
+assignments/all: assignments/a3-splines/all
 .PHONY : assignments/all
 
 # Recursive "preinstall" directory target.
 assignments/preinstall: assignments/a0-start/preinstall
 assignments/preinstall: assignments/a1-hello/preinstall
 assignments/preinstall: assignments/a2-interpolation/preinstall
+assignments/preinstall: assignments/a3-splines/preinstall
 .PHONY : assignments/preinstall
 
 # Recursive "clean" directory target.
 assignments/clean: assignments/a0-start/clean
 assignments/clean: assignments/a1-hello/clean
 assignments/clean: assignments/a2-interpolation/clean
+assignments/clean: assignments/a3-splines/clean
 .PHONY : assignments/clean
 
 #=============================================================================
@@ -165,10 +168,41 @@ assignments/a2-interpolation/clean: assignments/a2-interpolation/CMakeFiles/a2-g
 .PHONY : assignments/a2-interpolation/clean
 
 #=============================================================================
+# Directory level rules for directory assignments/a3-splines
+
+# Recursive "all" directory target.
+assignments/a3-splines/all: assignments/a3-splines/CMakeFiles/a3-unique.dir/all
+assignments/a3-splines/all: assignments/a3-splines/CMakeFiles/a3-test-linear.dir/all
+assignments/a3-splines/all: assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/all
+assignments/a3-splines/all: assignments/a3-splines/CMakeFiles/a3-test-spline.dir/all
+assignments/a3-splines/all: assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/all
+assignments/a3-splines/all: assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/all
+.PHONY : assignments/a3-splines/all
+
+# Recursive "preinstall" directory target.
+assignments/a3-splines/preinstall:
+.PHONY : assignments/a3-splines/preinstall
+
+# Recursive "clean" directory target.
+assignments/a3-splines/clean: assignments/a3-splines/CMakeFiles/a3-unique.dir/clean
+assignments/a3-splines/clean: assignments/a3-splines/CMakeFiles/a3-test-linear.dir/clean
+assignments/a3-splines/clean: assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/clean
+assignments/a3-splines/clean: assignments/a3-splines/CMakeFiles/a3-test-spline.dir/clean
+assignments/a3-splines/clean: assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/clean
+assignments/a3-splines/clean: assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/clean
+.PHONY : assignments/a3-splines/clean
+
+#=============================================================================
 # Directory level rules for directory classexamples
 
 # Recursive "all" directory target.
+classexamples/all: classexamples/CMakeFiles/week03-solveEqn.dir/all
+classexamples/all: classexamples/CMakeFiles/week02-drawline.dir/all
+classexamples/all: classexamples/CMakeFiles/week03-hermiteEx.dir/all
 classexamples/all: classexamples/CMakeFiles/week01-linearMotion.dir/all
+classexamples/all: classexamples/CMakeFiles/week01-oscillatingMotion.dir/all
+classexamples/all: classexamples/CMakeFiles/week02-colorLerp.dir/all
+classexamples/all: classexamples/CMakeFiles/week01-circularMotion.dir/all
 .PHONY : classexamples/all
 
 # Recursive "preinstall" directory target.
@@ -176,7 +210,13 @@ classexamples/preinstall:
 .PHONY : classexamples/preinstall
 
 # Recursive "clean" directory target.
+classexamples/clean: classexamples/CMakeFiles/week03-solveEqn.dir/clean
+classexamples/clean: classexamples/CMakeFiles/week02-drawline.dir/clean
+classexamples/clean: classexamples/CMakeFiles/week03-hermiteEx.dir/clean
 classexamples/clean: classexamples/CMakeFiles/week01-linearMotion.dir/clean
+classexamples/clean: classexamples/CMakeFiles/week01-oscillatingMotion.dir/clean
+classexamples/clean: classexamples/CMakeFiles/week02-colorLerp.dir/clean
+classexamples/clean: classexamples/CMakeFiles/week01-circularMotion.dir/clean
 .PHONY : classexamples/clean
 
 #=============================================================================
@@ -582,6 +622,258 @@ assignments/a2-interpolation/CMakeFiles/a2-gradient.dir/clean:
 .PHONY : assignments/a2-interpolation/CMakeFiles/a2-gradient.dir/clean
 
 #=============================================================================
+# Target rules for target assignments/a3-splines/CMakeFiles/a3-unique.dir
+
+# All Build rule for target.
+assignments/a3-splines/CMakeFiles/a3-unique.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+assignments/a3-splines/CMakeFiles/a3-unique.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+assignments/a3-splines/CMakeFiles/a3-unique.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-unique.dir/build.make assignments/a3-splines/CMakeFiles/a3-unique.dir/depend
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-unique.dir/build.make assignments/a3-splines/CMakeFiles/a3-unique.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=42,43,44,45 "Built target a3-unique"
+.PHONY : assignments/a3-splines/CMakeFiles/a3-unique.dir/all
+
+# Build rule for subdir invocation for target.
+assignments/a3-splines/CMakeFiles/a3-unique.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignments/a3-splines/CMakeFiles/a3-unique.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : assignments/a3-splines/CMakeFiles/a3-unique.dir/rule
+
+# Convenience name for target.
+a3-unique: assignments/a3-splines/CMakeFiles/a3-unique.dir/rule
+.PHONY : a3-unique
+
+# clean rule for target.
+assignments/a3-splines/CMakeFiles/a3-unique.dir/clean:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-unique.dir/build.make assignments/a3-splines/CMakeFiles/a3-unique.dir/clean
+.PHONY : assignments/a3-splines/CMakeFiles/a3-unique.dir/clean
+
+#=============================================================================
+# Target rules for target assignments/a3-splines/CMakeFiles/a3-test-linear.dir
+
+# All Build rule for target.
+assignments/a3-splines/CMakeFiles/a3-test-linear.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+assignments/a3-splines/CMakeFiles/a3-test-linear.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+assignments/a3-splines/CMakeFiles/a3-test-linear.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-linear.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-linear.dir/depend
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-linear.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-linear.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=35,36,37 "Built target a3-test-linear"
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-linear.dir/all
+
+# Build rule for subdir invocation for target.
+assignments/a3-splines/CMakeFiles/a3-test-linear.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 33
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignments/a3-splines/CMakeFiles/a3-test-linear.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-linear.dir/rule
+
+# Convenience name for target.
+a3-test-linear: assignments/a3-splines/CMakeFiles/a3-test-linear.dir/rule
+.PHONY : a3-test-linear
+
+# clean rule for target.
+assignments/a3-splines/CMakeFiles/a3-test-linear.dir/clean:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-linear.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-linear.dir/clean
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-linear.dir/clean
+
+#=============================================================================
+# Target rules for target assignments/a3-splines/CMakeFiles/a3-test-hermite.dir
+
+# All Build rule for target.
+assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/depend
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=32,33,34 "Built target a3-test-hermite"
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/all
+
+# Build rule for subdir invocation for target.
+assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 33
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/rule
+
+# Convenience name for target.
+a3-test-hermite: assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/rule
+.PHONY : a3-test-hermite
+
+# clean rule for target.
+assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/clean:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/clean
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/clean
+
+#=============================================================================
+# Target rules for target assignments/a3-splines/CMakeFiles/a3-test-spline.dir
+
+# All Build rule for target.
+assignments/a3-splines/CMakeFiles/a3-test-spline.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+assignments/a3-splines/CMakeFiles/a3-test-spline.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+assignments/a3-splines/CMakeFiles/a3-test-spline.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-spline.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-spline.dir/depend
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-spline.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-spline.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=38,39,40,41 "Built target a3-test-spline"
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-spline.dir/all
+
+# Build rule for subdir invocation for target.
+assignments/a3-splines/CMakeFiles/a3-test-spline.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignments/a3-splines/CMakeFiles/a3-test-spline.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-spline.dir/rule
+
+# Convenience name for target.
+a3-test-spline: assignments/a3-splines/CMakeFiles/a3-test-spline.dir/rule
+.PHONY : a3-test-spline
+
+# clean rule for target.
+assignments/a3-splines/CMakeFiles/a3-test-spline.dir/clean:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-spline.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-spline.dir/clean
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-spline.dir/clean
+
+#=============================================================================
+# Target rules for target assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir
+
+# All Build rule for target.
+assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/depend
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=29,30,31 "Built target a3-test-catmullrom"
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/all
+
+# Build rule for subdir invocation for target.
+assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 33
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/rule
+
+# Convenience name for target.
+a3-test-catmullrom: assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/rule
+.PHONY : a3-test-catmullrom
+
+# clean rule for target.
+assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/clean:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/clean
+.PHONY : assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/clean
+
+#=============================================================================
+# Target rules for target assignments/a3-splines/CMakeFiles/a3-curve-editor.dir
+
+# All Build rule for target.
+assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/build.make assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/depend
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/build.make assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=25,26,27,28 "Built target a3-curve-editor"
+.PHONY : assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/all
+
+# Build rule for subdir invocation for target.
+assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/rule
+
+# Convenience name for target.
+a3-curve-editor: assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/rule
+.PHONY : a3-curve-editor
+
+# clean rule for target.
+assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/build.make assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/clean
+.PHONY : assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/clean
+
+#=============================================================================
+# Target rules for target classexamples/CMakeFiles/week03-solveEqn.dir
+
+# All Build rule for target.
+classexamples/CMakeFiles/week03-solveEqn.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+classexamples/CMakeFiles/week03-solveEqn.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+classexamples/CMakeFiles/week03-solveEqn.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-solveEqn.dir/build.make classexamples/CMakeFiles/week03-solveEqn.dir/depend
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-solveEqn.dir/build.make classexamples/CMakeFiles/week03-solveEqn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=88,89 "Built target week03-solveEqn"
+.PHONY : classexamples/CMakeFiles/week03-solveEqn.dir/all
+
+# Build rule for subdir invocation for target.
+classexamples/CMakeFiles/week03-solveEqn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week03-solveEqn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : classexamples/CMakeFiles/week03-solveEqn.dir/rule
+
+# Convenience name for target.
+week03-solveEqn: classexamples/CMakeFiles/week03-solveEqn.dir/rule
+.PHONY : week03-solveEqn
+
+# clean rule for target.
+classexamples/CMakeFiles/week03-solveEqn.dir/clean:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-solveEqn.dir/build.make classexamples/CMakeFiles/week03-solveEqn.dir/clean
+.PHONY : classexamples/CMakeFiles/week03-solveEqn.dir/clean
+
+#=============================================================================
+# Target rules for target classexamples/CMakeFiles/week02-drawline.dir
+
+# All Build rule for target.
+classexamples/CMakeFiles/week02-drawline.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+classexamples/CMakeFiles/week02-drawline.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+classexamples/CMakeFiles/week02-drawline.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-drawline.dir/build.make classexamples/CMakeFiles/week02-drawline.dir/depend
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-drawline.dir/build.make classexamples/CMakeFiles/week02-drawline.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=84,85 "Built target week02-drawline"
+.PHONY : classexamples/CMakeFiles/week02-drawline.dir/all
+
+# Build rule for subdir invocation for target.
+classexamples/CMakeFiles/week02-drawline.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week02-drawline.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : classexamples/CMakeFiles/week02-drawline.dir/rule
+
+# Convenience name for target.
+week02-drawline: classexamples/CMakeFiles/week02-drawline.dir/rule
+.PHONY : week02-drawline
+
+# clean rule for target.
+classexamples/CMakeFiles/week02-drawline.dir/clean:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-drawline.dir/build.make classexamples/CMakeFiles/week02-drawline.dir/clean
+.PHONY : classexamples/CMakeFiles/week02-drawline.dir/clean
+
+#=============================================================================
+# Target rules for target classexamples/CMakeFiles/week03-hermiteEx.dir
+
+# All Build rule for target.
+classexamples/CMakeFiles/week03-hermiteEx.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+classexamples/CMakeFiles/week03-hermiteEx.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+classexamples/CMakeFiles/week03-hermiteEx.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-hermiteEx.dir/build.make classexamples/CMakeFiles/week03-hermiteEx.dir/depend
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-hermiteEx.dir/build.make classexamples/CMakeFiles/week03-hermiteEx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=86,87 "Built target week03-hermiteEx"
+.PHONY : classexamples/CMakeFiles/week03-hermiteEx.dir/all
+
+# Build rule for subdir invocation for target.
+classexamples/CMakeFiles/week03-hermiteEx.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week03-hermiteEx.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : classexamples/CMakeFiles/week03-hermiteEx.dir/rule
+
+# Convenience name for target.
+week03-hermiteEx: classexamples/CMakeFiles/week03-hermiteEx.dir/rule
+.PHONY : week03-hermiteEx
+
+# clean rule for target.
+classexamples/CMakeFiles/week03-hermiteEx.dir/clean:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-hermiteEx.dir/build.make classexamples/CMakeFiles/week03-hermiteEx.dir/clean
+.PHONY : classexamples/CMakeFiles/week03-hermiteEx.dir/clean
+
+#=============================================================================
 # Target rules for target classexamples/CMakeFiles/week01-linearMotion.dir
 
 # All Build rule for target.
@@ -590,7 +882,7 @@ classexamples/CMakeFiles/week01-linearMotion.dir/all: libsrc/atk/CMakeFiles/atk.
 classexamples/CMakeFiles/week01-linearMotion.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
 	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-linearMotion.dir/build.make classexamples/CMakeFiles/week01-linearMotion.dir/depend
 	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-linearMotion.dir/build.make classexamples/CMakeFiles/week01-linearMotion.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=55,56 "Built target week01-linearMotion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=78,79 "Built target week01-linearMotion"
 .PHONY : classexamples/CMakeFiles/week01-linearMotion.dir/all
 
 # Build rule for subdir invocation for target.
@@ -610,13 +902,97 @@ classexamples/CMakeFiles/week01-linearMotion.dir/clean:
 .PHONY : classexamples/CMakeFiles/week01-linearMotion.dir/clean
 
 #=============================================================================
+# Target rules for target classexamples/CMakeFiles/week01-oscillatingMotion.dir
+
+# All Build rule for target.
+classexamples/CMakeFiles/week01-oscillatingMotion.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+classexamples/CMakeFiles/week01-oscillatingMotion.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+classexamples/CMakeFiles/week01-oscillatingMotion.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-oscillatingMotion.dir/build.make classexamples/CMakeFiles/week01-oscillatingMotion.dir/depend
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-oscillatingMotion.dir/build.make classexamples/CMakeFiles/week01-oscillatingMotion.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=80,81 "Built target week01-oscillatingMotion"
+.PHONY : classexamples/CMakeFiles/week01-oscillatingMotion.dir/all
+
+# Build rule for subdir invocation for target.
+classexamples/CMakeFiles/week01-oscillatingMotion.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week01-oscillatingMotion.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : classexamples/CMakeFiles/week01-oscillatingMotion.dir/rule
+
+# Convenience name for target.
+week01-oscillatingMotion: classexamples/CMakeFiles/week01-oscillatingMotion.dir/rule
+.PHONY : week01-oscillatingMotion
+
+# clean rule for target.
+classexamples/CMakeFiles/week01-oscillatingMotion.dir/clean:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-oscillatingMotion.dir/build.make classexamples/CMakeFiles/week01-oscillatingMotion.dir/clean
+.PHONY : classexamples/CMakeFiles/week01-oscillatingMotion.dir/clean
+
+#=============================================================================
+# Target rules for target classexamples/CMakeFiles/week02-colorLerp.dir
+
+# All Build rule for target.
+classexamples/CMakeFiles/week02-colorLerp.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+classexamples/CMakeFiles/week02-colorLerp.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+classexamples/CMakeFiles/week02-colorLerp.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-colorLerp.dir/build.make classexamples/CMakeFiles/week02-colorLerp.dir/depend
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-colorLerp.dir/build.make classexamples/CMakeFiles/week02-colorLerp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=82,83 "Built target week02-colorLerp"
+.PHONY : classexamples/CMakeFiles/week02-colorLerp.dir/all
+
+# Build rule for subdir invocation for target.
+classexamples/CMakeFiles/week02-colorLerp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week02-colorLerp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : classexamples/CMakeFiles/week02-colorLerp.dir/rule
+
+# Convenience name for target.
+week02-colorLerp: classexamples/CMakeFiles/week02-colorLerp.dir/rule
+.PHONY : week02-colorLerp
+
+# clean rule for target.
+classexamples/CMakeFiles/week02-colorLerp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-colorLerp.dir/build.make classexamples/CMakeFiles/week02-colorLerp.dir/clean
+.PHONY : classexamples/CMakeFiles/week02-colorLerp.dir/clean
+
+#=============================================================================
+# Target rules for target classexamples/CMakeFiles/week01-circularMotion.dir
+
+# All Build rule for target.
+classexamples/CMakeFiles/week01-circularMotion.dir/all: libsrc/agl/CMakeFiles/agl.dir/all
+classexamples/CMakeFiles/week01-circularMotion.dir/all: libsrc/atk/CMakeFiles/atk.dir/all
+classexamples/CMakeFiles/week01-circularMotion.dir/all: libsrc/atkui/CMakeFiles/atkui.dir/all
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-circularMotion.dir/build.make classexamples/CMakeFiles/week01-circularMotion.dir/depend
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-circularMotion.dir/build.make classexamples/CMakeFiles/week01-circularMotion.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=76,77 "Built target week01-circularMotion"
+.PHONY : classexamples/CMakeFiles/week01-circularMotion.dir/all
+
+# Build rule for subdir invocation for target.
+classexamples/CMakeFiles/week01-circularMotion.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 classexamples/CMakeFiles/week01-circularMotion.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" 0
+.PHONY : classexamples/CMakeFiles/week01-circularMotion.dir/rule
+
+# Convenience name for target.
+week01-circularMotion: classexamples/CMakeFiles/week01-circularMotion.dir/rule
+.PHONY : week01-circularMotion
+
+# clean rule for target.
+classexamples/CMakeFiles/week01-circularMotion.dir/clean:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-circularMotion.dir/build.make classexamples/CMakeFiles/week01-circularMotion.dir/clean
+.PHONY : classexamples/CMakeFiles/week01-circularMotion.dir/clean
+
+#=============================================================================
 # Target rules for target libsrc/agl/CMakeFiles/agl.dir
 
 # All Build rule for target.
 libsrc/agl/CMakeFiles/agl.dir/all:
 	$(MAKE) $(MAKESILENT) -f libsrc/agl/CMakeFiles/agl.dir/build.make libsrc/agl/CMakeFiles/agl.dir/depend
 	$(MAKE) $(MAKESILENT) -f libsrc/agl/CMakeFiles/agl.dir/build.make libsrc/agl/CMakeFiles/agl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 "Built target agl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65 "Built target agl"
 .PHONY : libsrc/agl/CMakeFiles/agl.dir/all
 
 # Build rule for subdir invocation for target.
@@ -642,7 +1018,7 @@ libsrc/agl/CMakeFiles/agl.dir/clean:
 libsrc/atk/CMakeFiles/atk.dir/all:
 	$(MAKE) $(MAKESILENT) -f libsrc/atk/CMakeFiles/atk.dir/build.make libsrc/atk/CMakeFiles/atk.dir/depend
 	$(MAKE) $(MAKESILENT) -f libsrc/atk/CMakeFiles/atk.dir/build.make libsrc/atk/CMakeFiles/atk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=45,46,47,48,49,50,51,52 "Built target atk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=66,67,68,69,70,71,72,73 "Built target atk"
 .PHONY : libsrc/atk/CMakeFiles/atk.dir/all
 
 # Build rule for subdir invocation for target.
@@ -668,7 +1044,7 @@ libsrc/atk/CMakeFiles/atk.dir/clean:
 libsrc/atkui/CMakeFiles/atkui.dir/all:
 	$(MAKE) $(MAKESILENT) -f libsrc/atkui/CMakeFiles/atkui.dir/build.make libsrc/atkui/CMakeFiles/atkui.dir/depend
 	$(MAKE) $(MAKESILENT) -f libsrc/atkui/CMakeFiles/atkui.dir/build.make libsrc/atkui/CMakeFiles/atkui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=53,54 "Built target atkui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/isaac/Desktop/Classes/Computer Animation/projects/animation-toolkit/cmake-build-debug/CMakeFiles" --progress-num=74,75 "Built target atkui"
 .PHONY : libsrc/atkui/CMakeFiles/atkui.dir/all
 
 # Build rule for subdir invocation for target.

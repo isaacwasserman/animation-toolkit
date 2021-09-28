@@ -274,6 +274,123 @@ a2-gradient/fast:
 .PHONY : a2-gradient/fast
 
 #=============================================================================
+# Target rules for targets named a3-unique
+
+# Build rule for target.
+a3-unique: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a3-unique
+.PHONY : a3-unique
+
+# fast build rule for target.
+a3-unique/fast:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-unique.dir/build.make assignments/a3-splines/CMakeFiles/a3-unique.dir/build
+.PHONY : a3-unique/fast
+
+#=============================================================================
+# Target rules for targets named a3-test-linear
+
+# Build rule for target.
+a3-test-linear: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a3-test-linear
+.PHONY : a3-test-linear
+
+# fast build rule for target.
+a3-test-linear/fast:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-linear.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-linear.dir/build
+.PHONY : a3-test-linear/fast
+
+#=============================================================================
+# Target rules for targets named a3-test-hermite
+
+# Build rule for target.
+a3-test-hermite: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a3-test-hermite
+.PHONY : a3-test-hermite
+
+# fast build rule for target.
+a3-test-hermite/fast:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-hermite.dir/build
+.PHONY : a3-test-hermite/fast
+
+#=============================================================================
+# Target rules for targets named a3-test-spline
+
+# Build rule for target.
+a3-test-spline: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a3-test-spline
+.PHONY : a3-test-spline
+
+# fast build rule for target.
+a3-test-spline/fast:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-spline.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-spline.dir/build
+.PHONY : a3-test-spline/fast
+
+#=============================================================================
+# Target rules for targets named a3-test-catmullrom
+
+# Build rule for target.
+a3-test-catmullrom: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a3-test-catmullrom
+.PHONY : a3-test-catmullrom
+
+# fast build rule for target.
+a3-test-catmullrom/fast:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/build.make assignments/a3-splines/CMakeFiles/a3-test-catmullrom.dir/build
+.PHONY : a3-test-catmullrom/fast
+
+#=============================================================================
+# Target rules for targets named a3-curve-editor
+
+# Build rule for target.
+a3-curve-editor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a3-curve-editor
+.PHONY : a3-curve-editor
+
+# fast build rule for target.
+a3-curve-editor/fast:
+	$(MAKE) $(MAKESILENT) -f assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/build.make assignments/a3-splines/CMakeFiles/a3-curve-editor.dir/build
+.PHONY : a3-curve-editor/fast
+
+#=============================================================================
+# Target rules for targets named week03-solveEqn
+
+# Build rule for target.
+week03-solveEqn: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week03-solveEqn
+.PHONY : week03-solveEqn
+
+# fast build rule for target.
+week03-solveEqn/fast:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-solveEqn.dir/build.make classexamples/CMakeFiles/week03-solveEqn.dir/build
+.PHONY : week03-solveEqn/fast
+
+#=============================================================================
+# Target rules for targets named week02-drawline
+
+# Build rule for target.
+week02-drawline: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week02-drawline
+.PHONY : week02-drawline
+
+# fast build rule for target.
+week02-drawline/fast:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-drawline.dir/build.make classexamples/CMakeFiles/week02-drawline.dir/build
+.PHONY : week02-drawline/fast
+
+#=============================================================================
+# Target rules for targets named week03-hermiteEx
+
+# Build rule for target.
+week03-hermiteEx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week03-hermiteEx
+.PHONY : week03-hermiteEx
+
+# fast build rule for target.
+week03-hermiteEx/fast:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week03-hermiteEx.dir/build.make classexamples/CMakeFiles/week03-hermiteEx.dir/build
+.PHONY : week03-hermiteEx/fast
+
+#=============================================================================
 # Target rules for targets named week01-linearMotion
 
 # Build rule for target.
@@ -285,6 +402,45 @@ week01-linearMotion: cmake_check_build_system
 week01-linearMotion/fast:
 	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-linearMotion.dir/build.make classexamples/CMakeFiles/week01-linearMotion.dir/build
 .PHONY : week01-linearMotion/fast
+
+#=============================================================================
+# Target rules for targets named week01-oscillatingMotion
+
+# Build rule for target.
+week01-oscillatingMotion: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week01-oscillatingMotion
+.PHONY : week01-oscillatingMotion
+
+# fast build rule for target.
+week01-oscillatingMotion/fast:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-oscillatingMotion.dir/build.make classexamples/CMakeFiles/week01-oscillatingMotion.dir/build
+.PHONY : week01-oscillatingMotion/fast
+
+#=============================================================================
+# Target rules for targets named week02-colorLerp
+
+# Build rule for target.
+week02-colorLerp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week02-colorLerp
+.PHONY : week02-colorLerp
+
+# fast build rule for target.
+week02-colorLerp/fast:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week02-colorLerp.dir/build.make classexamples/CMakeFiles/week02-colorLerp.dir/build
+.PHONY : week02-colorLerp/fast
+
+#=============================================================================
+# Target rules for targets named week01-circularMotion
+
+# Build rule for target.
+week01-circularMotion: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 week01-circularMotion
+.PHONY : week01-circularMotion
+
+# fast build rule for target.
+week01-circularMotion/fast:
+	$(MAKE) $(MAKESILENT) -f classexamples/CMakeFiles/week01-circularMotion.dir/build.make classexamples/CMakeFiles/week01-circularMotion.dir/build
+.PHONY : week01-circularMotion/fast
 
 #=============================================================================
 # Target rules for targets named agl
@@ -345,10 +501,22 @@ help:
 	@echo "... a2-particlecubic"
 	@echo "... a2-screensaver"
 	@echo "... a2-unique"
+	@echo "... a3-curve-editor"
+	@echo "... a3-test-catmullrom"
+	@echo "... a3-test-hermite"
+	@echo "... a3-test-linear"
+	@echo "... a3-test-spline"
+	@echo "... a3-unique"
 	@echo "... agl"
 	@echo "... atk"
 	@echo "... atkui"
+	@echo "... week01-circularMotion"
 	@echo "... week01-linearMotion"
+	@echo "... week01-oscillatingMotion"
+	@echo "... week02-colorLerp"
+	@echo "... week02-drawline"
+	@echo "... week03-hermiteEx"
+	@echo "... week03-solveEqn"
 .PHONY : help
 
 
