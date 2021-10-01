@@ -50,5 +50,5 @@ int main()
 
    value = hermite.interpolate(2, 0.5);
    std::cout << "(natural) interpolate(2, 0.5) = " << to_string(value) << std::endl;
-}
+};
 

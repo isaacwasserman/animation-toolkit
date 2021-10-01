@@ -1,4 +1,5 @@
 #include <cmath>
+#include <string>
 #include "spline.h"
 #include "math.h"
 #include "interpolator_linear.h"
@@ -101,10 +102,29 @@ glm::vec3 Spline::getValue(float t) const {
     mInterpolator->computeControlPoints(mKeys);
     mDirty = false;
   }
+  if(mKeys.size() == 0){
+    return glm::vec3(0);
+  } else if(mKeys.size() == 1){
+    return mKeys[0];
+  }
 
-  // todo: your code here
-  // compute the segment containing t
-  // compute the value [0, 1] along the segment for interpolation
-  return glm::vec3(0); 
+  if(t <= mTimes[0]){
+    return mKeys[0];
+  }
+  if(t >= mTimes[mTimes.size()-1]){
+    return mKeys[mKeys.size()-1];
+  }
+
+  int segment = 0;
+  while(mTimes.size() - 1 > segment && mTimes[segment + 1] < t){
+    segment++;
+  }
+  
+  float startTime = mTimes[segment];
+  float endTime = mTimes[segment+1];
+  float segmentDuration = endTime - startTime;
+  float u = (t - startTime)/segmentDuration;
+
+  return mInterpolator->interpolate(segment, u);
 }
 

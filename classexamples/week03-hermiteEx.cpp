@@ -24,6 +24,8 @@ int main()
     A(3,0) =  0; A(3,1) = 0; A(3,2) = 1; A(3,3) = 4; A(3,4) = 1;
     A(4,0) =  0; A(4,1) = 0; A(4,2) = 0; A(4,3) = 1; A(4,4) = 2;
 
+    std::cout << "A:\n" << A << std::endl;
+
     vec2 v0 = 3.0f *(p1 - p0);
     vec2 v1 = 3.0f *(p2 - p0);
     vec2 v2 = 3.0f *(p3 - p1);
@@ -34,6 +36,8 @@ int main()
     p(2,0) = v2[0]; p(2,1) = v2[1]; 
     p(3,0) = v3[0]; p(3,1) = v3[1]; 
     p(4,0) = v4[0]; p(4,1) = v4[1]; 
+
+    std::cout << "P:\n" << p << std::endl;
 
     pPrime = A.inverse() * p;
     for (int i = 0; i < 5; i++)

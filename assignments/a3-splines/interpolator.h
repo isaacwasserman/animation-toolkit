@@ -5,6 +5,7 @@
 #include <vector>
 #include <map>
 #include "atk/glmmath.h"
+#include "curve.h"
 
 //-------------------------------------------------------------------
 // Interpolator is an abstract base class for 

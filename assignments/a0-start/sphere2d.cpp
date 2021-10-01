@@ -10,6 +10,8 @@ class Sphere2D : public atkui::Framework {
 
   // virtual function: can be overwritten by classes which inherit
   virtual void scene() {
+
+    std::cout << std::atan2(-0.6725,0.6725) << std::endl;
     // colors are RGB triplets in range [0,1]
     setColor(vec3(0,1,0));
 
