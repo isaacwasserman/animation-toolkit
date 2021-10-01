@@ -30,7 +30,56 @@ void CurveEditor::setup() {
 
 void CurveEditor::scene() {
   drawState();
-  // todo: your code here
+  int resolution = 20;
+  mSpline.setInterpolationType(mSpline.getInterpolationType());
+  std::vector<std::vector<glm::vec3>> lines;
+  if(mSpline.getInterpolationType() == "Linear"){
+    for(int i=0; i<mSpline.getNumKeys()-1; i++){
+      lines.push_back({mSpline.getKey(i),mSpline.getKey(i+1)});
+    }
+  }
+  else if(mSpline.getDuration() > 0){
+    std::vector<std::vector<glm::vec3>> lines;
+    std::vector<glm::vec3> points = {mSpline.getValue(0)};
+    for(int k=0; k<mSpline.getNumSegments(); k++){
+      float segmentStartTime = mSpline.getTime(k);
+      float segmentEndTime = mSpline.getTime(k+1);
+      float tStep = (segmentEndTime - segmentStartTime) / resolution;
+      float t = segmentStartTime + tStep;
+      for(int i=0; i<resolution; i++){
+        points.push_back(mSpline.getValue(t));
+        glm::vec3 p1 = points[points.size() - 2];
+        glm::vec3 p2 = points[points.size() - 1];
+        // std::cout << "p[" << points.size() - 2 << "] -> p[" << points.size() - 1 << "]" << std::endl;
+        lines.push_back({p1,p2});
+        t+=tStep;
+      }
+    }
+    setColor(glm::vec3(0,1,0));
+    for(int i=0; i<lines.size(); i++){
+      drawLine(lines[i][0],lines[i][1]);
+      // std::cout << lines[i][0] << " -> " << lines[i][1] << std::endl;
+    }
+    // std::cout << std::endl;
+  }
+  for(const std::vector<glm::vec3>& line : lines){
+    drawLine(line[0],line[1]);
+  }
+  setColor(glm::vec3(0,0,1));
+  for(int i=0;i<mSpline.getNumKeys();i++){
+    drawSphere(mSpline.getKey(i),10);
+  }
+  setColor(glm::vec3(1,1,0));
+  for(int i=0;i<mSpline.getNumControlPoints();i++){
+    if(mSpline.getInterpolationType() == "Hermite" && i % 2 == 1){
+      drawSphere(mSpline.getControlPoint(i-1) + mSpline.getControlPoint(i) - glm::vec3(0,0,10),10);
+      setColor(glm::vec3(1,1,1));
+      drawLine(mSpline.getControlPoint(i-1), mSpline.getControlPoint(i-1) + mSpline.getControlPoint(i));
+      setColor(glm::vec3(1,1,0));
+    } else {
+      drawSphere(mSpline.getControlPoint(i) - glm::vec3(0,0,10),10);
+    }
+  }
 }
 
 void CurveEditor::addPoint(const vec3& p) {

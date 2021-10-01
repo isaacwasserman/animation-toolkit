@@ -40,6 +40,7 @@ class Spline
     // @param time: a non-negative value
     // @param value: the key's value
     int appendKey(float time, const glm::vec3& value);
+    int appendKey(float time, const glm::vec3& value, const glm::vec3& color);
 
     // Delete the key with the given ID
     // Triggers a recomputation of control points
@@ -53,6 +54,8 @@ class Spline
     // Return the time  of the key with the given ID
     // @param keyID: Valid IDs are in range [0, getNumKeys()-1]
     float getTime(int keyID) const;
+
+    glm::vec3 getColor(int keyID) const;
 
     // Return the number of keys
     int getNumKeys() const;
@@ -86,6 +89,7 @@ class Spline
 
     std::vector<glm::vec3> mKeys;
     std::vector<float> mTimes;
+    std::vector<glm::vec3> mColors;
 
     std::map<std::string, Interpolator*> mInterpolators;
     class Interpolator* mInterpolator;

@@ -38,6 +38,15 @@ void Spline::editKey(int keyID, const glm::vec3& value) {
 int Spline::appendKey(float time, const glm::vec3& value) {
   mKeys.push_back(value);
   mTimes.push_back(time);
+  mColors.push_back(glm::vec3(0,1,0));
+  mDirty = true;
+  return mKeys.size();
+}
+
+int Spline::appendKey(float time, const glm::vec3& value, const glm::vec3& color) {
+  mKeys.push_back(value);
+  mTimes.push_back(time);
+  mColors.push_back(color);
   mDirty = true;
   return mKeys.size();
 }
@@ -57,6 +66,11 @@ glm::vec3 Spline::getKey(int keyID) const {
 float Spline::getTime(int keyID) const {
   assert(keyID >= 0 && keyID < (int) mKeys.size());
   return mTimes[keyID];
+}
+
+glm::vec3 Spline::getColor(int keyID) const {
+  assert(keyID >= 0 && keyID < (int) mKeys.size());
+  return mColors[keyID];
 }
 
 int Spline::getNumKeys() const {
@@ -107,7 +121,6 @@ glm::vec3 Spline::getValue(float t) const {
   } else if(mKeys.size() == 1){
     return mKeys[0];
   }
-
   if(t <= mTimes[0]){
     return mKeys[0];
   }
