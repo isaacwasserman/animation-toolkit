@@ -53,6 +53,7 @@ void TestAllRoo(const Matrix3& m)
 
     std::cout << "ZYX\n";
     test = m.toEulerAngles(Matrix3::ZYX);
+    // std::cout << "Input Matrix \n" << m << "\nOutput angles: " << test << std::endl;
     EXPECT_EQ(m, Matrix3(Matrix3::ZYX, test));
 }
 
