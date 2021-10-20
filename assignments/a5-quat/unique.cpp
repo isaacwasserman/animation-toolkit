@@ -5,6 +5,9 @@
 #include "atkmath/vector3.h"
 #include "atkmath/matrix3.h"
 #include "atkmath/quaternion.h"
+#include <Eigen/Dense>
+#include <glm/gtc/type_ptr.hpp>
+
 using namespace glm;
 using atkmath::Vector3;
 using atkmath::Quaternion;
@@ -47,19 +50,59 @@ class Unique : public atkui::Framework {
       }
       virtual void scene() {
          // renderer.beginShader("phong");
+         // setColor(vec3(1));
+         // for(std::vector<Cube> column : cubes){
+         //    for(Cube cube : column){
+         //       setColor(cube.color);
+         //       // Matrix3 m;
+         //       // m.fromEulerAnglesXYZ(Vector3(0,(pi<float>()/2.0f)*(1 - cube.luminance),0));
+         //       // Quaternion q;
+         //       // q.fromMatrix(m);
+         //       vec3 euler = vec3(0,(pi<float>()/2.0f)*(1 - cube.luminance),0);
+         //       renderer.transform(rotationAroundPoint(cube.position, euler));
+         //       drawCube(vec3(0), cube.scale);
+         //    }
+         // }
          setColor(vec3(1));
-         for(std::vector<Cube> column : cubes){
-            for(Cube cube : column){
-               setColor(cube.color);
-               Matrix3 m;
-               m.fromEulerAnglesXYZ(Vector3(0,(pi<float>()/2.0f)*(1 - cube.luminance),0));
-               Quaternion q;
-               q.fromMatrix(m);
-               rotate(q.w(), vec3(q.x(),q.y(),q.z()));
-               drawCube(cube.position, cube.scale);
-            }
-         }
-         // drawCube(vec3(125),vec3(250));
+         vec3 euler = vec3(0,(fmod(elapsedTime(), 2)/2.0f)*(pi<float>()/2.0f),0);
+         renderer.transform(rotationAroundPoint(vec3(width()/2,height()/2,0), euler));
+         drawCube(vec3(width()/2,height()/2,0), vec3(50));
+      }
+
+      mat4 rotationAroundPoint(const vec3& point, const vec3& euler){
+         float x1 = point[0];
+         float y1 = point[1];
+         float z1 = point[2];
+
+         float t1[16] = {
+            1, 0, 0, x1,
+            0, 1, 0, y1,
+            0, 0, 1, z1,
+            0, 0, 0, 1
+         };
+         mat4 translation1 = glm::make_mat4(t1);
+
+         Matrix3 rot;
+         rot.fromEulerAnglesXYZ(Vector3(euler[0],euler[1],euler[2]));
+         float r[16] = {
+            rot.m11, rot.m12, rot.m13, 0,
+            rot.m21, rot.m22, rot.m23, 0,
+            rot.m31, rot.m32, rot.m33, 0,
+            0,       0,       0,       1
+         };
+         mat4 rotation = glm::make_mat4(r);
+
+         float t2[16] = {
+            1, 0, 0, -1 * x1,
+            0, 1, 0, -1 * y1,
+            0, 0, 1, -1 * z1,
+            0, 0, 0, 1
+         };
+         mat4 translation2 = glm::make_mat4(t2);
+
+         mat4 transformation = translation1;
+
+         return transformation;
       }
 };
 
