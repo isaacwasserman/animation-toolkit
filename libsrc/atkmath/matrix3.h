@@ -82,7 +82,6 @@ public:
     friend Vector3 operator * (const Matrix3& a, const Vector3& v);     // linear transform
     friend Matrix3 operator * (const Matrix3& a, const Matrix3& b); // matrix 3 product
 
-private:
    union
    {
      struct
