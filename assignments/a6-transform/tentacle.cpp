@@ -19,6 +19,22 @@ public:
       joint1->setLocalTranslation(vec3(0,50,0));
       _tentacle.addJoint(joint1, root);
 
+      Joint* joint2  = new Joint("joint2");
+      joint2->setLocalTranslation(vec3(0,100,0));
+      _tentacle.addJoint(joint2, joint1);
+
+      Joint* joint3  = new Joint("joint3");
+      joint3->setLocalTranslation(vec3(0,150,0));
+      _tentacle.addJoint(joint3, joint2);
+
+      Joint* joint4  = new Joint("joint4");
+      joint4->setLocalTranslation(vec3(0,200,0));
+      _tentacle.addJoint(joint4, joint3);
+
+      Joint* joint5  = new Joint("joint5");
+      joint5->setLocalTranslation(vec3(0,250,0));
+      _tentacle.addJoint(joint5, joint4);
+
       // todo: add more joints
       _tentacle.fk(); // compute local2global transforms
    }

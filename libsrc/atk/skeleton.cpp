@@ -104,6 +104,7 @@ Joint* Skeleton::getByName(const std::string& name) const
         {
             return mJoints[i];
         }
+        // std::cout << name << " != " << mJoints[i]->getName() << std::endl;
     }
     return NULL;
 }
