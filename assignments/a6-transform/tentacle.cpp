@@ -42,7 +42,7 @@ public:
    {
       int nJoints = _tentacle.getNumJoints();
       for(int i=0;i<nJoints;i++){
-         _tentacle.getByID(i)->setLocalRotation(glm::angleAxis(sin(elapsedTime() + i)/1.5f,vec3(0,0,1)));
+         _tentacle.getByID(i)->setLocalRotation(glm::angleAxis((float) sin(elapsedTime() + i)/1.5f, vec3(0,0,1)));
       }
       
       _tentacle.fk(); // computes local2global transforms
