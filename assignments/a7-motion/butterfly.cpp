@@ -50,12 +50,18 @@ public:
       Transform lwingGeometry(
          eulerAngleRO(XYZ, vec3(0,0,0)),
          vec3(-80,0,0), 
-         vec3(120,20,200));
+         vec3(120,20,120));
 
       Transform rwingGeometry(
          eulerAngleRO(XYZ, vec3(0,0,0)),
          vec3(80,0,0), 
-         vec3(120,20,200));
+         vec3(120,20,120));
+
+      Transform front(
+         eulerAngleRO(XYZ, vec3(0,0,0)),
+         vec3(-80,0,0),
+         vec3(1)
+      );
 
       setColor(vec3(0.4, 0.4, 0.8));
       push();

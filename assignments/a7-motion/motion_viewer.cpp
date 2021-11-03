@@ -8,17 +8,23 @@ using namespace atk;
 class MotionViewer : public atkui::Framework
 {
 public:
+   std::string BVHPath = "../motions/Beta/jump.bvh";
    MotionViewer() : atkui::Framework(atkui::Perspective) {
+   }
+   MotionViewer(std::string path) : atkui::Framework(atkui::Perspective) {
+      BVHPath = path;
    }
 
    void setup() {
       BVHReader reader;
-      reader.load("../motions/Beta/jump.bvh", skeleton, motion);
+      reader.load(BVHPath, skeleton, motion);
       motion.update(skeleton, 0);
    }
 
    void scene() {
-      time += dt();
+      if(!paused){
+         time += dt() * timeScale;
+      }
       motion.update(skeleton, time);
 
       setColor(vec3(0,0,0.8));
@@ -31,12 +37,32 @@ public:
          drawEllipsoid(p1, p2, 5);
       }
 
+      currentFrame = motion.getKeyID(time);
+
       drawText(paused? "Paused" : "Playing", 10, 15);
       drawText("Current frame: "+std::to_string(currentFrame), 10, 35);
       drawText("Time scale: "+std::to_string(timeScale), 10, 55);
    }
 
    virtual void keyUp(int key, int mods) {
+      if(key == GLFW_KEY_P){
+         paused = !paused;
+      }
+      else if(key == GLFW_KEY_0){
+         time = 0.0f;
+      }
+      else if(key == GLFW_KEY_PERIOD){
+         time += 1.0f/motion.getFramerate();
+      }
+      else if(key == GLFW_KEY_COMMA){
+         time -= 1.0f/motion.getFramerate();
+      }
+      else if(key == GLFW_KEY_LEFT_BRACKET){
+         timeScale -= 0.1f;
+      }
+      else if(key == GLFW_KEY_RIGHT_BRACKET){
+         timeScale += 0.1f;
+      }
    }
 
 private:
@@ -51,6 +77,12 @@ private:
 
 
 int main(int argc, char** argv) {
-   MotionViewer viewer;
-   viewer.run();
+   if(argc > 1){
+      MotionViewer viewer = MotionViewer(argv[1]);
+      viewer.run();
+   }
+   else {
+      MotionViewer viewer;
+      viewer.run();
+   }
 }
