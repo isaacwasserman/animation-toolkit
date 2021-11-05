@@ -45,40 +45,50 @@ class Squirrel : public atkui::Framework {
 
       // todo tail
       push();
-        translate(vec3(width()*0, height()*-0.35, -1));
+        translate(vec3(width()*-0.1, height()*-0.25, -2));
+        rotate(tail.rotation, vec3(0,0,1));
+        translate(-tail.pivot);
         drawSprite(tail);
+      pop();
+
+      // arm1
+      push();
+        translate(vec3(width()*0.13,0,-1));
+        rotate(arm1.rotation, vec3(0,0,1));
+        translate(-arm1.pivot);
+        drawSprite(arm1);
+      pop();
+
+      // leg1
+      push();
+        translate(vec3(width()*0.1,height()*-0.23,0));
+        rotate(leg1.rotation, vec3(0,0,1));
+        translate(-leg1.pivot);
+        drawSprite(leg1);
       pop();
 
       // body
       push();
         translate(-body.pivot);
-        translate(vec3(0,0, 1));
+        translate(vec3(0,0,1));
         drawSprite(body);
       pop();
 
-
-      // arm1
-      // push();
-      //   drawSprite(arm1);
-      // pop();
-
       // leg2
-      // push();
-      //   drawSprite(leg2);
-      // pop();
+      push();
+        translate(vec3(width()*-0.12,height()*-0.23,2));
+        rotate(leg2.rotation, vec3(0,0,1));
+        translate(-leg2.pivot);
+        drawSprite(leg2);
+      pop();
 
-
-      
-    
-      // // leg1
-      // push();
-      //   drawSprite(leg1);
-      // pop();
-    
-      // // arm2
-      // push();
-      //   drawSprite(arm2);
-      // pop();
+      // arm2
+      push();
+        translate(vec3(width()*-0.1,0,3));
+        rotate(arm2.rotation, vec3(0,0,1));
+        translate(-arm2.pivot);
+        drawSprite(arm2);
+      pop();
     pop(); 
 
     renderer.fontColor(vec4(0,0,0,1));
@@ -126,7 +136,7 @@ class Squirrel : public atkui::Framework {
       for (int i = 0; i < key; i++) it++;
       _selected = it->first;
     } 
-    //std::cout << "selected: " << keyChar << " " << key << " " << _selected << std::endl;
+    // std::cout << "selected: " << keyChar << " " << key << " " << _selected << std::endl;
 
     if (keyChar == GLFW_KEY_UP) {
       _sprites[_selected].rotation += 0.1;
