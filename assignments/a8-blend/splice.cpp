@@ -24,12 +24,53 @@ public:
       _splice = spliceUpperBody(_lower, _upper, _alpha);
    }
 
+   std::vector<Joint*> getDeepChildren(Joint* root){
+      std::vector<Joint*> immediateChildren;
+      std::vector<Joint*> allChildren;
+      int numImmediateChildren = root->getNumChildren();
+      for(int i=0; i<numImmediateChildren; i++){
+         immediateChildren.push_back(root->getChildAt(i));
+      }
+      std::vector<std::vector<Joint*>> childrensChildren;
+      for(Joint* child : immediateChildren){
+         childrensChildren.push_back(getDeepChildren(child));
+      }
+      allChildren.insert( allChildren.end(), immediateChildren.begin(), immediateChildren.end() );
+      for(std::vector<Joint*> childList : childrensChildren){
+         allChildren.insert( allChildren.end(), childList.begin(), childList.end() );
+      }
+      return allChildren;
+   }
+
+   glm::quat getJointRot(Pose pose, Joint* joint){
+      int jointID = joint->getID();
+      return pose.jointRots[jointID];
+   }
+
    Motion spliceUpperBody(const Motion& lower, const Motion& upper, float alpha)
    {
       Motion result;
       result.setFramerate(lower.getFramerate());
-      // todo: your code here
-      result.appendKey(lower.getKey(0));
+      Joint* spine = _skeleton.getByName("Beta:Spine1");
+      int spineID = spine->getID();
+      std::vector<int> upperBodyIDs;
+      std::vector<Joint*> upperBodyJoints = getDeepChildren(spine);
+      for(Joint* joint : upperBodyJoints){
+         upperBodyIDs.push_back(joint->getID());
+      }
+      sort(upperBodyIDs.begin(), upperBodyIDs.end());
+
+      for(int k=0; k<upper.getNumKeys(); k++){
+         Pose basePose = lower.getKey(k % lower.getNumKeys());
+         Pose gangnamPose = upper.getKey(k);
+         for(Joint* upperBodyJoint : upperBodyJoints){
+            glm::quat baseRot = getJointRot(basePose, upperBodyJoint);
+            glm::quat gangnamRot = getJointRot(gangnamPose, upperBodyJoint);
+            glm::quat newRot = glm::slerp(baseRot, gangnamRot, alpha);
+            basePose.jointRots[upperBodyJoint->getID()] = newRot;
+         }
+         result.appendKey(basePose);
+      }
       return result;
    }
 

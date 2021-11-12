@@ -3,6 +3,7 @@
 #include "atkui/skeleton_drawer.h"
 #include <algorithm>
 #include <string>
+#include <glm/gtx/quaternion.hpp>
 
 using namespace glm;
 using namespace atk;
@@ -34,8 +35,15 @@ public:
 
       Motion result;
       result.setFramerate(motion.getFramerate());
-      // todo: your code here
-      result.appendKey(motion.getKey(0));
+
+      for(int k=0;k<motion.getNumKeys();k++){
+         Pose newPose = motion.getKey(k);
+         newPose.jointRots[leftArm->getID()]    = (leftLocalRot * inverse(newPose.jointRots[leftArm->getID()])) * motion.getKey(0).jointRots[leftArm->getID()];
+         newPose.jointRots[rightArm->getID()]   = (rightLocalRot * inverse(newPose.jointRots[rightArm->getID()])) * motion.getKey(0).jointRots[rightArm->getID()];
+         newPose.jointRots[leftElbow->getID()]  = elbowLocalRot;
+         newPose.jointRots[rightElbow->getID()] = elbowLocalRot;
+         result.appendKey(newPose);
+      }
 
       return result;
    }
@@ -53,8 +61,14 @@ public:
 
       Motion result;
       result.setFramerate(motion.getFramerate());
-      // todo: your code here
-      result.appendKey(motion.getKey(0));
+      for(int k=0;k<motion.getNumKeys();k++){
+         Pose newPose = motion.getKey(k);
+         newPose.jointRots[leftArm->getID()] = leftRot;
+         newPose.jointRots[rightArm->getID()] = rightRot;
+         newPose.jointRots[leftElbow->getID()] = elbowRot;
+         newPose.jointRots[rightElbow->getID()] = elbowRot;
+         result.appendKey(newPose);
+      }
 
       return result;
    }
