@@ -20,7 +20,7 @@ public:
       BVHReader reader;
       reader.load("../motions/Beta/walking.bvh", _skeleton, _motion);
 
-      _heading = 0;
+      _heading = 2;
       _offset = vec3(0);
       _offset[1] = _motion.getKey(0).rootPos[1];
       _time = 0;
@@ -32,10 +32,13 @@ public:
    {
       Motion result;
       result.setFramerate(motion.getFramerate());
-
-      // todo: your code here
-      Pose pose = motion.getKey(0);
-      result.appendKey(pose);
+      
+      for(int k=0; k<motion.getNumKeys(); k++){
+         Pose pose = motion.getKey(k);
+         pose.jointRots[0] = eulerAngleRO(XYZ, vec3(0, heading, 0));
+         pose.rootPos = pos + (pose.rootPos * eulerAngleRO(XYZ, vec3(0, -heading, 0)));
+         result.appendKey(pose);
+      }
       
       return result;
    }
