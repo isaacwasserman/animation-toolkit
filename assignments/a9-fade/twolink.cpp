@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <iostream>
 #include "atk/toolkit.h"
+#include "atkmath/matrix3.h"
+#include "atkmath/quaternion.h"
 #include "atkui/skeleton_drawer.h"
 #include "atkui/framework.h"
 #include "imgui/imgui.h"
@@ -111,9 +113,9 @@ class AIKSimple : public atkui::Framework
     vec3 h2 = c - vec3(0, 10, 0);
 
     beginShader("unlit");
-    drawCircle(c, 5.0f);
-    drawLine(v1, v2);
-    drawLine(h1, h2);
+      drawCircle(c, 5.0f);
+      drawLine(v1, v2);
+      drawLine(h1, h2);
     endShader();
 
     // reset projection
@@ -124,9 +126,75 @@ class AIKSimple : public atkui::Framework
     solveIKTwoLink(mActor, mGoalPosition);
   }
 
+  mat4 xRotationMatrix(const float& theta){
+    return mat4(
+        1, 0,          0, 0,
+        0, cos(theta), -1 * sin(theta), 0,
+        0, sin(theta), cos(theta), 0,
+        0,0,0,1
+    );
+  }
+
+  mat4 yRotationMatrix(const float& theta){
+    return mat4(
+        cos(theta),      0, sin(theta),0,
+        0,               1, 0,0,
+        -1 * sin(theta), 0, cos(theta),0,
+        0,0,0,1
+    );
+  }
+
+  mat4 zRotationMatrix(const float& theta){
+    return mat4(
+        cos(theta), -1 * sin(theta), 0, 0,
+        sin(theta), cos(theta),      0, 0,
+        0,          0,               1, 0,
+        0,0,0,1
+    );
+  }
+
   void solveIKTwoLink(Skeleton &skeleton, const vec3 &goalPosition)
   {
-    // todo: implement two link IK algorithm
+    float l1 = length(skeleton.getByName("Elbow")->getGlobalTranslation() - skeleton.getByName("Shoulder")->getGlobalTranslation());
+    float l2 = length(skeleton.getByName("Wrist")->getGlobalTranslation() - skeleton.getByName("Elbow")->getGlobalTranslation());
+    float r = length(goalPosition);
+
+    float cosFi = (pow(r,2) - pow(l1,2) - pow(l2,2))/(-2*l1*l2);
+    float fi = acos(cosFi);
+
+    float theta2z = fi - pi<float>();
+
+    float sinTheta1z = (-1 * l2 * sin(theta2z))/r;
+    float theta1z = asin(sinTheta1z);
+    
+    float gamma = asin(goalPosition[1]/r);
+    float beta = atan2(-1 * goalPosition[2], goalPosition[0]);
+
+    // std::cout << "theta2z: " << theta2z << std::endl;
+    // std::cout << "theta1z: " << theta1z << std::endl;
+    // std::cout << "beta: " << beta << std::endl;
+    // std::cout << "gamma: " << gamma << std::endl;
+    // std::cout << "d21: " << skeleton.getByName("Elbow")->getLocalTranslation() << std::endl;
+    // std::cout << "d32: " << skeleton.getByName("Wrist")->getLocalTranslation() << std::endl;
+
+    // std::cout << "goal: " << goalPosition << std::endl;
+
+    glm::mat4 transform(1.0f);
+    mat4 RyBeta = glm::rotate(transform, beta, vec3(0,1,0));
+    mat4 RzGamma = glm::rotate(transform, gamma, vec3(0,0,1));
+    mat4 RzTheta1z = glm::rotate(transform, theta1z, vec3(0,0,1));
+    mat4 RzTheta2z = glm::rotate(transform, theta2z, vec3(0,0,1));
+    mat4 R10 = RyBeta * RzGamma * RzTheta1z;
+    mat4 R21 = RzTheta2z;
+
+    quat Q10 = quat_cast(R10);
+    quat Q21 = quat_cast(R21);
+
+    if(!(isnan(cos(theta2z/2)) || isnan(sin(theta2z/2)))){
+      skeleton.getByName("Elbow")->setLocalRotation(Q21);
+      skeleton.getByName("Shoulder")->setLocalRotation(Q10);
+      skeleton.getRoot()->fk();
+    }
   }
 
  private:

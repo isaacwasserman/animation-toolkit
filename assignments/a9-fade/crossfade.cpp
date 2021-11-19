@@ -26,6 +26,46 @@ public:
     reader.load(filename, skeleton_, motion2_);
   }
 
+  Motion reorient(const Motion& motion, const vec3& pos, float heading)
+   {
+      Motion result;
+      result.setFramerate(motion.getFramerate());
+      
+      quat R0 = motion.getKey(0).jointRots[0];
+      vec3 D0 = motion.getKey(0).rootPos;
+      mat4 D0_matrix = mat4(
+        1,0,0,D0[0],
+        0,1,0,D0[1],
+        0,0,1,D0[2],
+        0,0,0,1
+      );
+      mat4 R0_matrix = glm::mat4_cast(R0);
+      mat4 T0 = D0_matrix * R0_matrix;
+
+      quat RHeading = eulerAngleRO(XYZ, vec3(0, heading, 0));
+      mat4 DPos_matrix = mat4(
+        1,0,0,pos[0],
+        0,1,0,pos[1],
+        0,0,1,pos[2],
+        0,0,0,1
+      );
+      mat4 RHeading_matrix = mat4_cast(RHeading);
+      mat4 TOrient = DPos_matrix * RHeading_matrix;
+
+      mat4 T = TOrient * inverse(T0);
+      vec3 offsetTranslation = vec3(T[0][3],T[1][3],T[2][3]);
+      mat3 offsetRotation = mat3(T);
+
+      for(int k=0; k<motion.getNumKeys(); k++){
+         Pose pose = motion.getKey(k);
+         pose.jointRots[0] = quat_cast(T) * pose.jointRots[0];
+         pose.rootPos = offsetTranslation + pose.rootPos;
+         result.appendKey(pose);
+      }
+      
+      return result;
+   }
+
   void crossfade(int numBlendFrames)
   {
     assert(motion1_.getNumKeys() > 0);
@@ -37,7 +77,24 @@ public:
     int start1 = motion1_.getNumKeys() - numBlendFrames;
     int start2 = 0;
 
-    // TODO: Your code here
+    motion2_ = reorient(motion2_, motion1_.getKey(motion1_.getNumKeys() - 1).rootPos, glm::eulerAngles(motion1_.getKey(motion1_.getNumKeys() - 1).jointRots[0]).y);
+
+    blend_.setFramerate(motion1_.getFramerate());
+
+    for(int i=0; i<motion1_.getNumKeys() - numBlendFrames; i++){
+      blend_.appendKey(motion1_.getKey(i));
+    }
+
+    for(int i=0; i<numBlendFrames; i++){
+      Pose p1 = motion1_.getKey(i + start1);
+      Pose p2 = motion2_.getKey(i + start2);
+      float u = ((float) i)/((float) numBlendFrames);
+      Pose blendedPose = Pose::Lerp(p1,p2,u);
+      blend_.appendKey(blendedPose);
+    }
+    for(int i=numBlendFrames; i<motion2_.getNumKeys(); i++){
+      blend_.appendKey(motion2_.getKey(i));
+    }
   }
 
   void save(const std::string &filename)
