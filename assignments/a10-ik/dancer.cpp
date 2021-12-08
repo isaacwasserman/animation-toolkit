@@ -27,8 +27,57 @@ public:
       _motion.update(_skeleton, elapsedTime());
 
       IKController ik;
-      // TODO: Your code here
+      int leftHand = _skeleton.getByName("Beta:LeftHand")->getID();
+      int rightHand = _skeleton.getByName("Beta:RightHand")->getID();
+      int leftFoot = _skeleton.getByName("Beta:LeftFoot")->getID();
+      int rightFoot = _skeleton.getByName("Beta:RightFoot")->getID();
 
+      std::vector<Joint*> leftArmChain;
+      Joint* j = _skeleton.getByName("Beta:LeftHand")->getParent();
+      while(j->getName() != "Beta:LeftShoulder"){
+         leftArmChain.push_back(j);
+         j = j->getParent();
+      }
+      leftArmChain.push_back(j);
+
+
+      std::vector<Joint*> rightArmChain;
+      j = _skeleton.getByName("Beta:RightHand")->getParent();
+      while(j->getName() != "Beta:RightShoulder"){
+         rightArmChain.push_back(j);
+         j = j->getParent();
+      }
+      rightArmChain.push_back(j);
+
+      std::vector<Joint*> leftLegChain;
+      j = _skeleton.getByName("Beta:LeftFoot")->getParent();
+      while(j->getName() != "Beta:Hips"){
+         leftLegChain.push_back(j);
+         j = j->getParent();
+      }
+      leftLegChain.push_back(j);
+
+
+      std::vector<Joint*> rightLegChain;
+      j = _skeleton.getByName("Beta:RightFoot")->getParent();
+      while(j->getName() != "Beta:Hips"){
+         rightLegChain.push_back(j);
+         j = j->getParent();
+      }
+      rightLegChain.push_back(j);
+
+      vec3 hipPos = _skeleton.getByName("Beta:Hips")->getLocalTranslation() + vec3(0, 10*sin(5*elapsedTime()), 0);
+      _skeleton.getByName("Beta:Hips")->setLocalTranslation(hipPos);
+
+      vec3 leftHandPos = _skeleton.getByName("Beta:LeftHand")->getGlobalTranslation() + vec3(30, 100*sin(5*elapsedTime()), 40);
+      vec3 rightHandPos = _skeleton.getByName("Beta:RightHand")->getGlobalTranslation() + vec3(-30, 100*sin(5*(elapsedTime()+pi<float>())), 40);
+
+      IKController::solveIKCCD(_skeleton, leftHand, leftHandPos, leftArmChain, 0.1f, 50, 0.1);
+      IKController::solveIKCCD(_skeleton, rightHand, rightHandPos, rightArmChain, 0.1f, 50, 0.1);
+
+      IKController::solveIKCCD(_skeleton, leftFoot, vec3(20, 30, 0), leftLegChain, 0.1f, 50, 0.1);
+      IKController::solveIKCCD(_skeleton, rightFoot, vec3(-20, 30, 0), rightLegChain, 0.1f, 50, 0.1);
+      _skeleton.fk();
    }
 
    void scene()

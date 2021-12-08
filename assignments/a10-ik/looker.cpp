@@ -29,7 +29,25 @@ public:
    }
 
    void lookAtTarget(Joint* head, const vec3& target) {
-      // TODO: Your code here
+      vec3 delta = target - head->getGlobalTranslation();
+      float deltaX = delta[0];
+      float deltaY = delta[1];
+      float deltaZ = delta[2];
+
+      float thetaX = -1 * atan2(deltaY,deltaZ);
+      float thetaY = (-1 * atan2(deltaZ,deltaX)) + pi<float>()/2;
+
+      mat4 Rx = glm::rotate(mat4(1.0f), thetaX, vec3(1,0,0));
+      mat4 Ry = glm::rotate(mat4(1.0f), thetaY, vec3(0,1,0));
+      mat4 R = Ry*Rx;
+
+      quat Rq = quat_cast(R);
+
+      mat4 a = glm::rotate(mat4(1.0f), pi<float>()/2, vec3(1,0,0));
+      quat aq = quat_cast(a);
+
+      head->setLocalRotation(Rq);
+
       head->fk();
    }
 

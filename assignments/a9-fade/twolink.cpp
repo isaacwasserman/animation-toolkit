@@ -170,20 +170,13 @@ class AIKSimple : public atkui::Framework
     float gamma = asin(goalPosition[1]/r);
     float beta = atan2(-1 * goalPosition[2], goalPosition[0]);
 
-    // std::cout << "theta2z: " << theta2z << std::endl;
-    // std::cout << "theta1z: " << theta1z << std::endl;
-    // std::cout << "beta: " << beta << std::endl;
-    // std::cout << "gamma: " << gamma << std::endl;
-    // std::cout << "d21: " << skeleton.getByName("Elbow")->getLocalTranslation() << std::endl;
-    // std::cout << "d32: " << skeleton.getByName("Wrist")->getLocalTranslation() << std::endl;
-
-    // std::cout << "goal: " << goalPosition << std::endl;
-
     glm::mat4 transform(1.0f);
+
     mat4 RyBeta = glm::rotate(transform, beta, vec3(0,1,0));
     mat4 RzGamma = glm::rotate(transform, gamma, vec3(0,0,1));
     mat4 RzTheta1z = glm::rotate(transform, theta1z, vec3(0,0,1));
     mat4 RzTheta2z = glm::rotate(transform, theta2z, vec3(0,0,1));
+    
     mat4 R10 = RyBeta * RzGamma * RzTheta1z;
     mat4 R21 = RzTheta2z;
 

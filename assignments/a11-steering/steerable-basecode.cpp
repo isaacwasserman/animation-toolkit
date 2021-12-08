@@ -4,9 +4,9 @@
 using namespace glm;
 using namespace atk;
 
-float ASteerable::kVelKv = 150.0; 
-float ASteerable::kOriKv = 150.0;  
-float ASteerable::kOriKp = 150.0;
+float ASteerable::kVelKv = 16; 
+float ASteerable::kOriKv = 16;  
+float ASteerable::kOriKp = 64;
 
 // Given a desired velocity, veld, and dt, compute a transform holding 
 // the new orientation and change in position
@@ -16,12 +16,33 @@ float ASteerable::kOriKp = 150.0;
 void ASteerable::senseControlAct(const vec3& veld, float dt)
 {
    // Compute _vd and _thetad
+   _vd = length(veld);
+   _thetad = atan2(veld[0], veld[2]);
 
+   float position = _state[POS];
+   float speed = _state[VEL];
+   float orientation = _state[ORI];
+   float angularVelocity = _state[AVEL];
    // compute _force and _torque
+   _force = _mass * kVelKv * (_vd - speed);
+   _torque = _inertia * (kOriKp * (_thetad - orientation) - kOriKv * _derivative[ORI]);
 
    // find derivative
+   float posDeriv = speed;
+   float velDeriv = _force / _mass;
+   float oriDeriv = angularVelocity;
+   float avelDeriv = _torque / _inertia;
+
+   _derivative[POS] = posDeriv;
+   _derivative[VEL] = velDeriv;
+   _derivative[ORI] = oriDeriv;
+   _derivative[AVEL] = avelDeriv;
 
    // update state
+   _state[POS] = position + dt*speed;
+   _state[VEL] = speed + dt*velDeriv;
+   _state[ORI] = orientation + dt*oriDeriv;
+   _state[AVEL] = angularVelocity + dt*avelDeriv;
 
    // compute global position and orientation and update _characterRoot
    quat rot = glm::angleAxis(_state[ORI], vec3(0,1,0));

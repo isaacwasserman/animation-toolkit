@@ -10,8 +10,8 @@ using namespace atk;
 ABehavior::ABehavior(const char* name) : _name(name)
 {
    // TODO: set good values
-   setParam("MaxSpeed", 1);
-   setParam("AgentRadius", 1);
+   setParam("MaxSpeed", 100);
+   setParam("AgentRadius", 50);
 }
 
 //--------------------------------------------------------------
@@ -32,7 +32,14 @@ ASeek::ASeek() : ABehavior("Seek")
 vec3 ASeek::calculateDesiredVelocity(const ASteerable& actor,
    const AWorld& world, const vec3& target)
 {
-   return vec3(0,0,0);
+   vec3 direction = normalize(target - actor.getPosition());
+   float distance = length(target - actor.getPosition());
+   float magnitude = getParam("MaxSpeed");
+   vec3 velocity = direction * magnitude;
+   if(distance <= getParam("AgentRadius")){
+      return vec3(0);
+   }
+   return velocity;
 }
 
 //--------------------------------------------------------------
@@ -53,7 +60,10 @@ AFlee::AFlee() : ABehavior("Flee")
 vec3 AFlee::calculateDesiredVelocity(const ASteerable& actor,
    const AWorld& world, const vec3& targetPos)
 {
-    return vec3(0,0,0);
+   vec3 direction = normalize(targetPos - actor.getPosition());
+   float magnitude = getParam("MaxSpeed");
+   vec3 velocity = direction * magnitude;
+   return -1.0f * velocity;
 }
 
 //--------------------------------------------------------------
@@ -75,7 +85,14 @@ AArrival::AArrival() : ABehavior("Arrival")
 vec3 AArrival::calculateDesiredVelocity(const ASteerable& actor,
    const AWorld& world, const vec3& targetPos)
 {
-    return vec3(0,0,0);
+   vec3 direction = normalize(targetPos - actor.getPosition());
+   float distance = length(targetPos - actor.getPosition());
+   float magnitude = getParam("MaxSpeed");
+   if(distance <= getParam("TargetRadius")){
+      magnitude = (distance / getParam("TargetRadius")) * getParam("MaxSpeed");
+   }
+   vec3 velocity = direction * magnitude;
+   return velocity;
 }
 
 //--------------------------------------------------------------

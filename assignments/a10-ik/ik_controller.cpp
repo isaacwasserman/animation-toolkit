@@ -26,16 +26,43 @@ bool IKController::solveIKAnalytic(Skeleton& skeleton,
 
   Joint* hip = knee->getParent();
 
-  // TODO: Your code here
+  float goalLength = length(goalPos - hip->getGlobalTranslation());
+
+  // vec3 r = ankle->getGlobalTranslation() - hip->getGlobalTranslation();
+  // vec3 e = goalPos - ankle->getGlobalTranslation();
+  // float deltaPhi = nudgeFactor * atan2(length(cross(r,e)), dot(r,r)+dot(r,e));
+  // vec3 axis = cross(r,e)/length(cross(r,e));
+  // quat nudge = angleAxis(deltaPhi,axis);
+  
   return true;
 }
 
 bool IKController::solveIKCCD(Skeleton& skeleton, int jointid, 
-    const vec3& goalPos, const std::vector<Joint*>& chain, 
+    vec3 goalPos, const std::vector<Joint*>& chain, 
     float threshold, int maxIters, float nudgeFactor) {
   // There are no joints in the IK chain for manipulation
   if (chain.size() == 0) return true;
 
-  // TODO: Your code here
-  return false;
+  Joint* endEffector = skeleton.getByID(jointid);
+
+  // for(int i=0; i<chain.size(); i++){
+  //   Joint* j = chain[i];
+  //   std::cout << j->getName() << std::endl;
+  // }
+
+  int nIters = 0;
+  while(length(goalPos - endEffector->getGlobalTranslation()) > threshold && nIters < maxIters){
+    for(int i=0; i<chain.size(); i++){
+      Joint* j = chain[i];
+      vec3 r = endEffector->getGlobalTranslation() - j->getGlobalTranslation();
+      vec3 e = goalPos - endEffector->getGlobalTranslation();
+      float deltaPhi = nudgeFactor * atan2(length(cross(r,e)), dot(r,r)+dot(r,e));
+      vec3 axis = cross(r,e)/length(cross(r,e));
+      quat nudge = angleAxis(deltaPhi,axis);
+      j->setLocalRotation(j->getLocalRotation() * nudge);
+    }
+    skeleton.fk();
+    nIters++;
+  }
+  return (length(goalPos - endEffector->getGlobalTranslation()) <= threshold);
 }
