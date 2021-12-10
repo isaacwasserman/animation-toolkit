@@ -21,8 +21,12 @@ ASteerable::ASteerable() :
    _force(0), _torque(0), _vd(0), _thetad(0), 
    _veld(0, 0, 0), _vel(0, 0, 0)
 {
-   _drawer.color = normalize(vec3(random(),random(),random()));
-   _drawer.size = normalize(vec3(random(),random(),random())) * 2.0f;
+   if(unique){
+      _drawer.color = normalize(vec3(random(),random(),random()));
+      _drawer.size = normalize(vec3(random(),random(),random())) * 2.0f;
+   } else {
+      _drawer.color = vec3(0,0,0.5);
+   }
 }
 
 ASteerable::~ASteerable()
@@ -69,7 +73,12 @@ void ASteerable::update(const vec3& desiredVelocity, float dt)
    // Clamping dt will make it easier for your dynamics to stay stable at the expense
    // of smoothness
    dt = std::min<float>(0.1, dt);
-   _time += dt * animationSpeed;
+   if(unique){
+      _time += dt * animationSpeed;
+   }
+   else {
+      _time += dt;
+   }
 
    // reset state
    _veld = desiredVelocity;

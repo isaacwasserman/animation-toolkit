@@ -22,6 +22,7 @@ public:
    glm::quat getRotation() const;
    void setColor(const glm::vec3& color); 
    float animationSpeed = ((float) rand()) / ((float) RAND_MAX);
+   bool unique = false;
 
 private:
    void senseControlAct(const glm::vec3& veld, float dt);

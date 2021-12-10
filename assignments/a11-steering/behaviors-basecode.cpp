@@ -34,8 +34,9 @@ ASeek::ASeek() : ABehavior("Seek")
 vec3 ASeek::calculateDesiredVelocity(const ASteerable& actor,
    const AWorld& world, const vec3& target)
 {
-   setParam("MaxSpeed", 150 * actor.animationSpeed);
-   std::cout << getParam("MaxSpeed") << std::endl;
+   if(actor.unique){
+      setParam("MaxSpeed", 150 * actor.animationSpeed);
+   }
    vec3 direction = normalize(target - actor.getPosition());
    float distance = length(target - actor.getPosition());
    float magnitude = getParam("MaxSpeed");
