@@ -6,6 +6,9 @@
 #include "obstacle.h"
 #include "world.h"
 
+#define DB_PERLIN_IMPL
+#include "db_perlin.h"
+
 class ABehavior
 {
 public:
@@ -74,6 +77,7 @@ public:
    AWander();
    virtual glm::vec3 calculateDesiredVelocity(
       const ASteerable& actor, const AWorld& world, const glm::vec3& target);
+   int phase = rand();
 };
 
 class ASeparation : public ABehavior

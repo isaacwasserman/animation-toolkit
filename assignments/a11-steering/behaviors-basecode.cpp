@@ -1,6 +1,8 @@
 #include "behaviors.h"
 #include "steerable.h"
 #include <cmath>
+#include <time.h>
+#include <chrono>
 
 using namespace glm;
 using namespace atk;
@@ -32,6 +34,8 @@ ASeek::ASeek() : ABehavior("Seek")
 vec3 ASeek::calculateDesiredVelocity(const ASteerable& actor,
    const AWorld& world, const vec3& target)
 {
+   setParam("MaxSpeed", 150 * actor.animationSpeed);
+   std::cout << getParam("MaxSpeed") << std::endl;
    vec3 direction = normalize(target - actor.getPosition());
    float distance = length(target - actor.getPosition());
    float magnitude = getParam("MaxSpeed");
@@ -73,7 +77,7 @@ AArrival::AArrival() : ABehavior("Arrival")
 {
    // TODO: Set good parameters
    setParam("kArrival", 1);
-   setParam("TargetRadius", 1);
+   setParam("TargetRadius", 100);
 }
 
 //
@@ -85,14 +89,15 @@ AArrival::AArrival() : ABehavior("Arrival")
 vec3 AArrival::calculateDesiredVelocity(const ASteerable& actor,
    const AWorld& world, const vec3& targetPos)
 {
-   vec3 direction = normalize(targetPos - actor.getPosition());
-   float distance = length(targetPos - actor.getPosition());
-   float magnitude = getParam("MaxSpeed");
-   if(distance <= getParam("TargetRadius")){
-      magnitude = (distance / getParam("TargetRadius")) * getParam("MaxSpeed");
+   vec3 target_offset = targetPos - actor.getPosition();
+   float distance = length(target_offset);
+   float ramped_speed = getParam("MaxSpeed") * (distance / (getParam("TargetRadius") + getParam("AgentRadius")));
+   float clipped_speed = min(ramped_speed, getParam("MaxSpeed"));
+   vec3 desired_velocity = (clipped_speed / distance) * target_offset;
+   if(distance <= getParam("AgentRadius")){
+      return vec3(0);
    }
-   vec3 velocity = direction * magnitude;
-   return velocity;
+   return desired_velocity;
 }
 
 //--------------------------------------------------------------
@@ -105,13 +110,20 @@ ADeparture::ADeparture() : ABehavior("Departure")
    setParam("kDeparture", 1);
 }
 
-//
 // Calculate a repelent velocity based on the actor's 
 // distance from the target
 vec3 ADeparture::calculateDesiredVelocity(const ASteerable& actor,
    const AWorld& world, const vec3& targetPos)
 {
-   return vec3(0,0,0);
+   vec3 target_offset = -1.0f * (targetPos - actor.getPosition());
+   float distance = length(target_offset);
+   float ramped_speed = getParam("MaxSpeed") * (distance / (getParam("TargetRadius") + getParam("AgentRadius")));
+   float clipped_speed = max(min(ramped_speed, getParam("MaxSpeed")),10.0f);
+   vec3 desired_velocity = (clipped_speed / distance) * target_offset;
+   if(length(desired_velocity) < 10.0f){
+      desired_velocity = (clipped_speed / distance) * vec3(10,0,0);
+   }
+   return desired_velocity;
 }
 
 //--------------------------------------------------------------
@@ -125,11 +137,56 @@ AAvoid::AAvoid() : ABehavior("Avoid")
 // If an actor is near an obstacle, avoid adds either a tangential or
 // normal response velocity
 //  Obstacles are in getWorld()->getObstacle(i) and have class type AObstacle
+
+bool obstacleOfConcern(vec3 sightline, AObstacle obstacle, float AgentRadius, vec3 actorPos){
+   float obstacleRadius = obstacle.radius + 50;
+   return length(obstacle.position - sightline) <= (obstacleRadius + AgentRadius) || length(obstacle.position - (sightline / 2.0f)) <= obstacleRadius + AgentRadius || length(obstacle.position - (sightline / 4.0f)) <= obstacleRadius + AgentRadius || length(obstacle.position - actorPos) <= obstacleRadius + AgentRadius;
+}
+
 vec3 AAvoid::calculateDesiredVelocity(const ASteerable& actor,
    const AWorld& world, const vec3& targetPos)
 {
-    return vec3(0,0,0);
+   vec3 actorPos = actor.getPosition();
+   vec3 direction = normalize(targetPos - actorPos);
+   float distance = length(targetPos - actorPos);
+   float magnitude = getParam("MaxSpeed");
+   vec3 baseVelocity = direction * magnitude;
+   if(distance <= getParam("AgentRadius")){
+      return vec3(0);
+   }
+
+   if(world.getNumObstacles() == 0){
+      return baseVelocity;
+   }
+   
+   vec3 sightline = actorPos + normalize(baseVelocity) * (length(baseVelocity) / getParam("MaxSpeed"));
+   std::vector<AObstacle> obstaclesOfConcern;
+
+   for(int i = 0; i < world.getNumObstacles(); i++){
+      if(obstacleOfConcern(sightline, world.getObstacle(i), getParam("AgentRadius"), actorPos)){
+         obstaclesOfConcern.push_back(world.getObstacle(i));
+      }
+   }
+   if(obstaclesOfConcern.size() == 0){
+      return baseVelocity;
+   }
+
+   AObstacle closestObstacleOfConcern = obstaclesOfConcern[0];
+   for(int i = 0; i < obstaclesOfConcern.size(); i++){
+      if(length(obstaclesOfConcern[i].position - actorPos) - obstaclesOfConcern[i].radius < length(closestObstacleOfConcern.position - actorPos) - closestObstacleOfConcern.radius){
+         closestObstacleOfConcern = obstaclesOfConcern[i];
+      }
+   }
+
+   vec3 deterrenceDirection = normalize(sightline - closestObstacleOfConcern.position);
+   float deterrenceMagnitude = 50.0f;
+   vec3 deterrence = deterrenceDirection * deterrenceMagnitude;
+
+   std::cout << deterrence << std::endl;
+
+   return baseVelocity + deterrence;
 }
+
 //--------------------------------------------------------------
 // Wander behavior
 
@@ -137,12 +194,22 @@ AWander::AWander() : ABehavior("Wander")
 {
    setParam("kWander", 1);
 }
+// Credit: Alessandro Pezzato https://stackoverflow.com/questions/19555121/how-to-get-current-timestamp-in-milliseconds-since-1970-just-the-way-java-gets
+uint64_t timeSinceEpochMillisec() {
+  using namespace std::chrono;
+  return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
+}
 
 // Wander returns a velocity whose direction changes randomly (and smoothly)
 vec3 AWander::calculateDesiredVelocity(const ASteerable& actor,
    const AWorld& world, const vec3& target)
 {
-   return vec3(0,0,0);
+   int t = timeSinceEpochMillisec();
+   float theta = (db::perlin((t + phase)/5000.0f) * pi<float>() * 2.0f) - (pi<float>());
+   vec3 direction = vec3(sin(theta), 0, cos(theta));
+   std::cout << theta << std::endl;
+   float magnitude = getParam("MaxSpeed");
+   return direction * magnitude;
 }
 
 //--------------------------------------------------------------

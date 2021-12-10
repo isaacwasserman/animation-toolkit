@@ -19,13 +19,23 @@ void ASteerable::senseControlAct(const vec3& veld, float dt)
    _vd = length(veld);
    _thetad = atan2(veld[0], veld[2]);
 
+   // std::cout << to_string(veld) << std::endl;
+
    float position = _state[POS];
    float speed = _state[VEL];
    float orientation = _state[ORI];
    float angularVelocity = _state[AVEL];
+
    // compute _force and _torque
    _force = _mass * kVelKv * (_vd - speed);
-   _torque = _inertia * (kOriKp * (_thetad - orientation) - kOriKv * _derivative[ORI]);
+
+   float angle = _thetad - orientation;
+   if(angle > 180){
+      angle -= 360;
+   } else if(angle < -180){
+      angle += 360;
+   }
+   _torque = _inertia * (kOriKp * angle - kOriKv * _derivative[ORI]);
 
    // find derivative
    float posDeriv = speed;
